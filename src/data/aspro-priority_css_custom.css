@@ -1,0 +1,658 @@
+/* CSS kod pishite v etom faile, chotobi pri ustanovke obnovlenii ne bilo problem  */
+/* --------------------------------------- */
+/* Here you can put custom css rules for your site */
+
+.item-views.company.front.type_3 .company-block .image {
+	left: 25rem;
+	bottom: 4.5rem;
+}
+
+.partners.front .flexslider .slides > li img {
+	width: 100%;
+}
+
+.partners.front .flexslider .slides > li.item .image {
+	height: 100%;
+}
+
+.partners.front .flexslider .slides > li {
+	height: 100%;
+}
+
+.item-views.partners.within .item .image {
+	height: unset;
+}
+
+.detail.partners .image {
+	height: 150px;
+}
+
+.item .image,
+.item-views.services-items.type_5 .items .item .image {
+	width: unset;
+	height: unset;
+	line-height: unset;
+}
+
+.item > .wrap,
+.item-views.services-items.type_5 .items .item > .wrap {
+	/*	padding:unset;
+        padding-bottom: 39px;*/
+}
+
+.item-views.services-items.type_1 .items .item .image {
+	max-height: 200px;
+}
+
+.mega-menu
+	table
+	td.full_dropdown
+	> .wrap
+	> .dropdown-menu
+	> li
+	.menu_body.with_image {
+	padding-left: 130px;
+}
+
+.item-views.services-items.type_3 .items .item .image > .wrap,
+.item-views.services-items.type_5 .items .item .image > .wrap {
+	height: 350px;
+}
+
+.item-views.list .item .previewtext {
+	max-height: 200px;
+}
+
+.catalog.item-views.list .item .image-wrapper {
+	height: unset;
+}
+
+.banners-big a {
+	background-color: unset;
+}
+
+.item-views.news-items .item.big_block > .wrap .image img {
+	height: unset;
+	max-width: unset;
+}
+
+.partners.item-views.type_1.type_2 {
+	padding-top: 20px;
+	padding-bottom: 0;
+}
+
+.banners-big .slides .title,
+.banners-big .slides h1 {
+	font-size: 3em;
+}
+
+.logo_and_menu-row .inline-language {
+	display: table-cell;
+	height: 87px;
+	vertical-align: middle;
+	border: none;
+	background: 0 0;
+	padding: 0 20px;
+}
+
+.brand-custom .social-block {
+	display: flex;
+	margin-left: 60px;
+}
+
+.brand-custom .social-block a {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	border: 1px solid #eaeaea;
+	border-radius: 4px;
+	padding: 14px;
+	margin-right: 15px;
+}
+
+.brand-custom .social-block a:last-child {
+	margin-right: 0;
+}
+
+.brand-custom .social-block a:hover {
+	opacity: 0.8;
+}
+
+.brand-custom .social-block .fb {
+	background-image: url("../images/svg/brands/fb.svg");
+}
+
+.brand-custom .social-block .telegram {
+	background-image: url("../images/svg/brands/telegram.svg");
+}
+
+.brand-custom .social-block .ok {
+	background-image: url("../images/svg/brands/ok.svg");
+}
+
+.brand-custom .social-block .insta {
+	background-image: url("../images/svg/brands/instagram.svg");
+}
+
+.brand-custom .social-block .vk {
+	background-image: url("../images/svg/brands/vk.svg");
+}
+
+.brand-custom .social-block .tiktok {
+	background-image: url("../images/svg/brands/tiktok.svg");
+}
+
+.brand-custom .social-block .you {
+	background-image: url(../images/svg/brands/you.svg);
+}
+
+.brand-custom .top_content {
+	display: flex;
+}
+
+.brand-custom .right-block {
+	width: 100%;
+}
+
+.brand-custom .shop-brand-slider {
+	margin-top: 43px;
+	margin-left: 60px;
+	margin-right: 60px;
+}
+
+.brand-custom .shop-brand-slider img {
+	width: auto;
+	max-width: 100%;
+}
+
+.brand-custom .shop-brand-slider .item {
+	display: flex !important;
+	height: 45px;
+	align-items: center;
+	justify-content: center;
+}
+
+.brand-custom .shop-brand-slider .flexslider .flex-direction-nav a {
+	opacity: 1;
+	visibility: visible;
+}
+
+.brand-custom .shop-brand-slider .flexslider .flex-prev {
+	left: -60px;
+}
+
+.brand-custom .shop-brand-slider .flexslider .flex-next {
+	right: -60px;
+}
+
+@media (max-width: 767px) {
+	.brand-custom .shop-brand-slider .item {
+		justify-content: center;
+	}
+
+	.brand-custom .shop-brand-slider .flex-direction-nav a {
+		border: none;
+	}
+
+	.brand-custom .shop-brand-slider .flex-direction-nav a:after {
+		background: transparent;
+	}
+}
+
+@media (max-width: 600px) {
+	.brand-custom .top_content {
+		flex-flow: column;
+		align-items: center;
+	}
+
+	.brand-custom .image {
+		margin-bottom: 15px !important;
+	}
+
+	.brand-custom .social-block {
+		margin: 0;
+		justify-content: center;
+	}
+
+	.brand-custom .shop-brand-slider {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+.mult-products-catalog-list-item__img {
+	background: none 50% 100% no-repeat;
+	height: 304px;
+	background-size: contain;
+}
+
+.lang-link {
+	color: #333;
+	position: relative;
+	top: 2px;
+}
+
+header.light .lang-link {
+	color: white;
+	font-weight: bold;
+}
+
+.svg-search {
+	width: 19px;
+}
+
+@media (max-width: 991px) {
+	footer .address.blocks {
+		display: none;
+	}
+
+	footer .email.blocks,
+	.contacts .email,
+	.contacts .address {
+		display: none;
+	}
+}
+
+.brand-custom .social-block {
+	margin-left: 45px;
+}
+
+@media (max-width: 767px) {
+	.item-views.services-items.type_4.product_items:not(.icons)
+		.items
+		.item
+		.image {
+		width: 100%;
+		margin-bottom: 24px;
+	}
+}
+
+/* 亟仍�� list_brands_detail 18-04-2021 */
+.image-brand-slider {
+	position: relative;
+	width: 250px;
+	max-height: 365px;
+	text-align: center;
+	margin-bottom: 0;
+	background: #fff;
+	float: left;
+	z-index: 1;
+}
+
+@media (max-width: 810px) {
+	.image-brand-slider {
+		max-width: 150px;
+	}
+}
+
+@media (max-width: 540px) {
+	.image-brand-slider {
+		margin-bottom: 39px;
+		float: none;
+		width: 100%;
+		max-height: 100%;
+		max-width: 100%;
+	}
+}
+
+.image-brand-slider .flexslider .flex-direction-nav a {
+	width: 24px;
+	height: 24px;
+	background: #30a657;
+}
+
+.image-brand-slider .flexslider .flex-direction-nav a:before {
+	top: 50%;
+	left: 50%;
+	width: 5px;
+	height: 8px;
+	margin: 0;
+	background: url(../images/brand-slider-arrow.svg) 0 0 no-repeat;
+}
+
+.image-brand-slider .flexslider .flex-direction-nav a:after {
+	display: none;
+}
+
+.image-brand-slider .flexslider .flex-direction-nav a.flex-next {
+	margin-top: -12px;
+}
+
+@media (max-width: 767px) {
+	.image-brand-slider .flexslider .flex-direction-nav a.flex-next {
+		border-radius: 3px;
+	}
+}
+
+.image-brand-slider .flexslider .flex-direction-nav a.flex-next:before {
+	transform: translate(-50%, -50%);
+}
+
+.image-brand-slider .flexslider .flex-direction-nav a.flex-prev {
+	margin-top: -12px;
+}
+
+@media (max-width: 767px) {
+	.image-brand-slider .flexslider .flex-direction-nav a.flex-prev {
+		border-radius: 3px;
+	}
+}
+
+.image-brand-slider .flexslider .flex-direction-nav a.flex-prev:before {
+	transform: translate(-50%, -50%) scale(-1, 1);
+}
+
+.image-brand-slider .flexslider .flex-direction-nav a.flex-next:hover:before {
+	background-position: 0 0;
+}
+
+.image-brand-slider .flexslider .flex-direction-nav a.flex-prev:hover:before {
+	background-position: 0 0;
+}
+
+@media (max-width: 540px) {
+	.image-brand-slider .flexslider {
+		margin-bottom: 39px;
+	}
+}
+
+.image-brand-slider .flexslider.flexslider-control-nav {
+	margin-bottom: 48px;
+}
+
+@media (max-width: 540px) {
+	.image-brand-slider .flexslider.flexslider-control-nav {
+		margin-bottom: 48px;
+	}
+}
+
+.image-brand-slider.hover-arrows .flexslider .flex-direction-nav {
+	opacity: 0;
+	visibility: hidden;
+}
+
+@media (max-width: 540px) {
+	.image-brand-slider.hover-arrows .flexslider .flex-direction-nav {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.image-brand-slider.hover-arrows .flexslider .flex-direction-nav.opacity1 {
+	opacity: 0 !important;
+	visibility: hidden;
+}
+
+@media (max-width: 540px) {
+	.image-brand-slider.hover-arrows .flexslider .flex-direction-nav.opacity1 {
+		opacity: 1 !important;
+		visibility: visible;
+	}
+}
+
+@media (max-width: 540px) {
+	.item-views.sections.type_4_within .items .item .image-brand-slider .image {
+		margin-bottom: 0;
+	}
+}
+
+.catalog.item-views
+	.image-brand-slider
+	.flexslider
+	.flex-direction-nav
+	.flex-next {
+	right: -30px !important;
+}
+
+.catalog.item-views
+	.image-brand-slider
+	.flexslider
+	.flex-direction-nav
+	.flex-prev {
+	left: -30px !important;
+}
+
+.catalog.item-views .item:hover .hover-arrows .flexslider .flex-direction-nav {
+	opacity: 1 !important;
+	visibility: visible;
+	transition: all 0.3s ease;
+}
+
+.catalog.item-views
+	.item:hover
+	.hover-arrows
+	.flexslider
+	.flex-direction-nav.opacity1 {
+	opacity: 1 !important;
+	visibility: visible;
+}
+
+/* 亟仂弍舒于从舒 亟仍�� list_brands_detail 18-04-2021 */
+html[xmlns] .image-brand-slider .flexslider .slides {
+	display: flex;
+	flex-shrink: 0;
+	flex-grow: 0;
+}
+
+.item-views.sections.type_4_within .items .item .image-brand-slider .image {
+	flex-shrink: 0;
+	flex-grow: 0;
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+}
+
+@media (max-width: 540px) {
+	.item-views.sections.type_4_within .items .item .image-brand-slider .image {
+		max-height: 365px;
+	}
+}
+
+.catalog.sections .item .image-brand-slider .image img {
+	flex-shrink: 1;
+	flex-grow: 0;
+	min-height: 0;
+	max-height: 100%;
+	min-width: 0;
+	max-width: 100%;
+	width: auto;
+	height: auto;
+}
+
+.better {
+	overflow: hidden;
+	background-color: white !important;
+}
+
+.beverages-card-img__round img {
+	border-radius: 50%;
+}
+
+.product-beverage-list {
+	justify-content: center;
+}
+
+.product-beverage {
+	overflow: hidden;
+}
+
+.c-scroll-page {
+	background-color: white !important;
+}
+
+.mult-products-wrap.video .mult-products-catalog {
+	width: 100%;
+}
+
+.video .mult-products-catalog-list img {
+	position: absolute;
+	width: 784px;
+	top: -50px;
+}
+
+@media (max-width: 470px) {
+	.video .mult-products-catalog-list img {
+		width: 470px;
+		top: -26px;
+	}
+}
+
+@media (max-width: 420px) {
+	.video .mult-products-catalog-list img {
+		width: 370px;
+		top: -18px;
+	}
+}
+
+@media (max-width: 340px) {
+	.video .mult-products-catalog-list img {
+		width: 321px;
+		top: -15px;
+	}
+}
+
+.video .mult-products-catalog-list img {
+	pointer-events: none;
+}
+
+.mult-products-catalog-list iframe {
+	border-radius: 50px;
+}
+
+@media (max-width: 685px) {
+	.video .mult-products-catalog-list img {
+		width: 120%;
+	}
+}
+
+@media (max-width: 610px) {
+	.video .mult-products-catalog-list img {
+		top: -46px;
+	}
+}
+
+@media (max-width: 610px) {
+	.video .mult-products-catalog-list img {
+		top: -40px;
+	}
+}
+
+@media (max-width: 505px) {
+	.video .mult-products-catalog-list img {
+		top: -35px;
+	}
+
+	.mult-products-catalog-list iframe {
+		border-radius: 25px;
+	}
+}
+
+@media (max-width: 455px) {
+	.video .mult-products-catalog-list img {
+		top: -32px;
+	}
+}
+
+@media (max-width: 425px) {
+	.video .mult-products-catalog-list img {
+		top: -30px;
+	}
+}
+
+@media (max-width: 400px) {
+	.video .mult-products-catalog-list img {
+		top: -25px;
+	}
+}
+
+@media (max-width: 330px) {
+	.video .mult-products-catalog-list img {
+		top: -23px;
+	}
+}
+
+.pull-right.btn_buy-in-shop .wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.pull-right.btn_buy-in-shop .wrap a {
+	padding: 35px 22px 35px 10px;
+	color: #fff;
+	font-weight: bold;
+	white-space: nowrap;
+	text-transform: uppercase;
+	letter-spacing: 0.8px;
+	text-decoration: underline;
+}
+
+.pull-right.btn_buy-in-shop .wrap:hover {
+	opacity: 0.5;
+}
+
+#mobilemenu .btn_buy-in-shop .wrap {
+	position: relative;
+	display: flex;
+	align-items: center;
+	padding: 9px 35px 10px;
+}
+
+#mobilemenu .btn_buy-in-shop .wrap a {
+	color: #333;
+	white-space: nowrap;
+	text-transform: uppercase;
+	letter-spacing: 0.8px;
+	text-decoration: underline;
+}
+
+#mobilemenu .btn_buy-in-shop .wrap svg {
+	opacity: 0.5;
+	margin-right: 5px;
+}
+
+#mobilemenu .btn_buy-in-shop .wrap svg path {
+	fill: #333;
+}
+.pull-right.btn_buy-in-shop .wrap a {
+	color: #333;
+}
+.pull-right.btn_buy-in-shop .wrap svg > path {
+	fill: #333;
+}
+header.light .pull-right.btn_buy-in-shop .wrap a {
+	color: white;
+}
+header.light .pull-right.btn_buy-in-shop .wrap svg > path {
+	fill: white;
+}
+
+#headerfixed .btn_buy-in-shop {
+	position: absolute;
+	right: 70px;
+	top: -11px;
+}
+
+footer {
+	background: linear-gradient(to right, #81a24a, #57844d);
+}
+
+footer .info .subscribe_button .btn {
+	background: transparent;
+	border-color: transparent;
+}
+
+footer.footer-v1 .social-icons ul {
+	background: transparent;
+}
+
+.bottom-menu .item .title a {
+	color: #fff !important;
+}
+
+footer .copy {
+	color: #fff;
+}
