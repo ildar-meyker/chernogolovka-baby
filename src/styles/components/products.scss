@@ -1,0 +1,94 @@
+.products {
+	margin: 0 -15px;
+	display: flex;
+	flex-wrap: wrap;
+
+	&__image {
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: contain;
+
+		&:before {
+			content: " ";
+			padding-top: 50%;
+			display: block;
+		}
+	}
+
+	&__col {
+		position: relative;
+		flex: 0 0 auto;
+		width: 33.33%;
+		padding: 0 15px;
+	}
+
+	&__item {
+		border-radius: 20px;
+		background: #fff;
+		padding: 30px;
+		text-align: center;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+
+		&:hover {
+			position: absolute;
+			top: 0;
+			left: 15px;
+			right: 15px;
+			height: auto;
+			min-height: 100%;
+			box-shadow: 0px 13px 21px 2px rgba(0, 0, 0, 0.12);
+
+			.products__desc {
+				max-height: none;
+			}
+		}
+	}
+
+	&__title {
+		margin-bottom: 10/18 + em;
+		margin-top: 43/18 + em;
+		font-size: 18px;
+		font-weight: 700;
+		line-height: 24/18 + em;
+		color: rgba(#000, 0.8);
+	}
+
+	&__desc {
+		max-height: 18/14 * 3 + em;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		font-size: 14px;
+		line-height: 18/14 + em;
+	}
+
+	&__prop {
+		margin-top: 20/16 + em;
+		font-size: 16px;
+		line-height: 22/16 + em;
+		color: rgba(#000, 0.5);
+	}
+
+	&__btn-buy {
+		margin-top: auto;
+		padding-top: 30/18 + em;
+		font-size: 18px;
+
+		> * {
+			transition: all 0.2s;
+			padding: 13/18 + em 44/18 + em;
+			background: #30a757;
+			border: 0;
+			border-radius: 13/18 + em;
+			font-size: 1em;
+			font-weight: 700;
+			text-align: center;
+			color: rgba(#fff, 0.9);
+
+			&:hover {
+				background: lighten(#30a757, 5%);
+			}
+		}
+	}
+}
