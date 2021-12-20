@@ -1,10 +1,33 @@
 .nav-pics {
+	&:before,
+	&:after {
+		content: " ";
+		height: 110px;
+		background: url(../images/curved-bgs/light-blue.svg) no-repeat 50% 0;
+		background-size: 100% auto;
+		display: block;
+	}
+
+	&:before {
+		height: 90px;
+	}
+
+	&:after {
+		background-position: 50% 100%;
+	}
+
+	&__content {
+		background: #f5f7fe;
+	}
+
 	&__row {
 		display: flex;
+		margin: 0 -35px;
 	}
 
 	&__col {
 		flex: 0 0 auto;
+		padding: 0 35px;
 		width: 33.33%;
 	}
 
@@ -41,7 +64,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin-top: -0.5em;
+		margin-top: 22/32 + em;
 		font-size: calc(min(3vw, 32px));
 		font-weight: 900;
 		line-height: (43.65/32);
@@ -87,6 +110,18 @@
 	}
 }
 
+@media (max-width: 991.98px) {
+	.nav-pics {
+		&__row {
+			margin: 0 -20px;
+		}
+
+		&__col {
+			padding: 0 20px;
+		}
+	}
+}
+
 @media (max-width: 767.98px) {
 	.nav-pics {
 	}
@@ -94,12 +129,19 @@
 
 @media (max-width: 599.98px) {
 	.nav-pics {
+		&:before {
+			height: 35px;
+		}
+		&:after {
+			height: 55px;
+		}
+
 		&__row {
 			flex-wrap: wrap;
 		}
 
-		&__item {
-			margin-top: 30px;
+		&__col {
+			margin-top: 40px;
 
 			&:first-child {
 				margin-top: 0;
