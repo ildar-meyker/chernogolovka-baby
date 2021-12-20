@@ -1,6 +1,5 @@
 .section {
 	margin: 120px 0;
-	letter-spacing: 0.05em;
 
 	&__center {
 		padding: 0 20px;
@@ -10,12 +9,12 @@
 
 	&__title {
 		text-align: center;
-		text-shadow: 0 0 0 3px #fff;
+		text-shadow: 0.05em 0.05em 0 #fff;
 		text-transform: uppercase;
 		margin-bottom: 50/54 + em !important;
 		font-size: calc(min(4vw, 54px));
 		font-weight: 900;
-		line-height: (74/54);
+		line-height: (73.66/54);
 		color: #0033a0;
 	}
 
