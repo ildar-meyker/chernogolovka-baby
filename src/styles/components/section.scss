@@ -1,7 +1,9 @@
 .section {
 	margin: 120px 0;
+	letter-spacing: 0.05em;
 
 	&__center {
+		padding: 0 20px;
 		max-width: 1380px;
 		margin: 0 auto;
 	}
@@ -72,6 +74,49 @@
 			.section__curved__content {
 				background: #30a757;
 			}
+		}
+	}
+
+	&__more {
+		margin-top: 55px;
+		text-align: center;
+
+		&__button {
+			transition: all 0.2s;
+			display: inline-flex;
+			align-items: center;
+			padding: 18/18 + em 30/18 + em;
+			border: 2px solid #fff;
+			border-radius: 13/18 + em;
+			font-size: 18px;
+			font-weight: 700;
+			color: #fff;
+
+			i {
+				margin-left: 20/32 + em;
+				font-size: 32/18 + em;
+			}
+
+			&:hover {
+				background: #fff;
+				color: #30a757;
+			}
+		}
+	}
+}
+
+@media (max-width: 767.98px) {
+	.section {
+		&__title {
+			font-size: 40px;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.section {
+		&__title {
+			font-size: 22px;
 		}
 	}
 }
