@@ -433,3 +433,12 @@
     width: 100%; }
   .slider-logos .slick-dots li {
     margin: 0 5px; } }
+
+.promo__image {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .promo__image:before {
+    content: " ";
+    padding-top: 38.54167%;
+    display: block; }

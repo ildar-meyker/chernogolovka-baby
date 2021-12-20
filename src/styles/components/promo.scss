@@ -1,0 +1,13 @@
+.promo {
+	&__image {
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		&:before {
+			content: " ";
+			padding-top: 740/1920 * 100%;
+			display: block;
+		}
+	}
+}
