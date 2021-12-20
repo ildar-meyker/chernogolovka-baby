@@ -10,6 +10,8 @@
 
 	&__title {
 		text-align: center;
+		text-shadow: 0 0 0 3px #fff;
+		text-transform: uppercase;
 		margin-bottom: 50/54 + em !important;
 		font-size: calc(min(4vw, 54px));
 		font-weight: 900;
@@ -119,12 +121,12 @@
 @media (max-width: 767.98px) {
 	.section {
 		&__title {
-			font-size: 40px;
+			font-size: 32px;
 		}
 	}
 }
 
-@media (max-width: 600px) {
+@media (max-width: 599.98px) {
 	.section {
 		&__title {
 			font-size: 22px;
