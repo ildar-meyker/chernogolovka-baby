@@ -78,8 +78,9 @@
 	}
 
 	&__more {
-		margin-top: 55px;
+		margin-top: 55/18 + em;
 		text-align: center;
+		font-size: 18px;
 
 		&__button {
 			transition: all 0.2s;
@@ -88,7 +89,7 @@
 			padding: 18/18 + em 30/18 + em;
 			border: 2px solid #fff;
 			border-radius: 13/18 + em;
-			font-size: 18px;
+			font-size: 18/18 + em;
 			font-weight: 700;
 			color: #fff;
 
@@ -100,6 +101,16 @@
 			&:hover {
 				background: #fff;
 				color: #30a757;
+			}
+
+			&--green {
+				border-color: #30a757;
+				color: #30a757;
+
+				&:hover {
+					background: #30a757;
+					color: #fff;
+				}
 			}
 		}
 	}
@@ -117,6 +128,10 @@
 	.section {
 		&__title {
 			font-size: 22px;
+		}
+
+		&__more {
+			font-size: 16px;
 		}
 	}
 }
