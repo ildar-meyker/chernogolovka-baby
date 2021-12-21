@@ -6,7 +6,20 @@
 @import "./components/slider-logos";
 @import "./components/promo";
 @import "./components/video";
+@import "./components/less-more";
 
-.letter-spacing {
+.page--orangecow {
 	letter-spacing: 0.05em;
+
+	.header-v6 {
+		padding: 22px 0;
+	}
+
+	#mobileheader {
+		height: 77px;
+	}
+
+	#mobileheader .logo {
+		margin-top: 5px;
+	}
 }

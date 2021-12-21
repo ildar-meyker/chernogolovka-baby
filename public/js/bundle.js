@@ -97,11 +97,64 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_Notify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/Notify */ "./src/js/modules/Notify.js");
 /* harmony import */ var _modules_SliderLogos__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/SliderLogos */ "./src/js/modules/SliderLogos.js");
+/* harmony import */ var _modules_LessMore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/LessMore */ "./src/js/modules/LessMore.js");
+
 
 
 $(function () {
   console.log("Hello, world!");
 });
+
+/***/ }),
+
+/***/ "./src/js/modules/LessMore.js":
+/*!************************************!*\
+  !*** ./src/js/modules/LessMore.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// import $ from "jquery";
+var LessMore = {
+  checkHeight: function checkHeight($scope) {
+    $(".less-more", $scope).each(function () {
+      var $crop = $(this).find(".less-more__crop");
+      var $button = $(this).find(".less-more__button");
+      var $ruler = $(this).find(".less-more__ruler");
+      $button.toggleClass("shown", $ruler.height() > $crop.height()).removeClass("active");
+      $crop.attr("style", "");
+    });
+  },
+  toggle: function toggle(e) {
+    e.preventDefault();
+    var $_ = $(e.currentTarget).closest(".less-more");
+    var $ruler = $_.find(".less-more__ruler");
+    var $crop = $_.find(".less-more__crop");
+    var isActive = $(e.currentTarget).hasClass("active");
+
+    if (!isActive) {
+      $(e.currentTarget).addClass("active");
+      $crop.css("max-height", $ruler.height());
+    } else {
+      $(e.currentTarget).removeClass("active");
+      $crop.attr("style", "");
+    }
+  },
+  _handleWindowResize: function _handleWindowResize() {
+    this.checkHeight();
+  },
+  init: function init() {
+    this.checkHeight();
+    $(document).on("click", ".less-more__button", this.toggle.bind(this));
+    $(window).on("resize", $.throttle(250, this._handleWindowResize.bind(this)));
+  }
+};
+$(function () {
+  LessMore.init();
+});
+/* harmony default export */ __webpack_exports__["default"] = (LessMore);
 
 /***/ }),
 
