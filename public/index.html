@@ -8,14 +8,158 @@
 	
 	<title> Главная</title>
 
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300italic,400italic,500italic,700italic,400,300,500,700subset=latin,cyrillic-ext"  />
-	<link rel="stylesheet" href="data/aspro-priority_css_bootstrap.min.css">
-	<link rel="stylesheet" href="data/aspro-priority_styles.css">
-	<link rel="stylesheet" href="data/aspro-priority_template_styles.css">
-	<link rel="stylesheet" href="data/aspro-priority_css_width-3.css">
-	<link rel="stylesheet" href="data/aspro-priority_css_font-10.css">
-	<link rel="stylesheet" href="data/aspro-priority_themes_custom_s1_colors.min.css">
-	<link rel="stylesheet" href="data/aspro-priority_css_custom.css">
+	<script data-skip-moving="true">(function(w, d) {var v = w.frameCacheVars = {'CACHE_MODE':'HTMLCACHE','storageBlocks':[],'dynamicBlocks':{'options-block':'d41d8cd98f00','1nrXUE':'c99d48126a8a','xKE1HZ':'d41d8cd98f00'},'AUTO_UPDATE':true,'AUTO_UPDATE_TTL':'0','version':'2'};var inv = false;if (v.AUTO_UPDATE === false){if (v.AUTO_UPDATE_TTL && v.AUTO_UPDATE_TTL > 0){var lm = Date.parse(d.lastModified);if (!isNaN(lm)){var td = new Date().getTime();if ((lm + v.AUTO_UPDATE_TTL * 1000) >= td){w.frameRequestStart = false;w.preventAutoUpdate = true;return;}inv = true;}}else{w.frameRequestStart = false;w.preventAutoUpdate = true;return;}}var r = w.XMLHttpRequest ? new XMLHttpRequest() : (w.ActiveXObject ? new w.ActiveXObject("Microsoft.XMLHTTP") : null);if (!r) { return; }w.frameRequestStart = true;var m = v.CACHE_MODE; var l = w.location; var x = new Date().getTime();var q = "?bxrand=" + x + (l.search.length > 0 ? "&" + l.search.substring(1) : "");var u = l.protocol + "//" + l.host + l.pathname + q;r.open("GET", u, true);r.setRequestHeader("BX-ACTION-TYPE", "get_dynamic");r.setRequestHeader("X-Bitrix-Composite", "get_dynamic");r.setRequestHeader("BX-CACHE-MODE", m);r.setRequestHeader("BX-CACHE-BLOCKS", v.dynamicBlocks ? JSON.stringify(v.dynamicBlocks) : "");if (inv){r.setRequestHeader("BX-INVALIDATE-CACHE", "Y");}try { r.setRequestHeader("BX-REF", d.referrer || "");} catch(e) {}if (m === "APPCACHE"){r.setRequestHeader("BX-APPCACHE-PARAMS", JSON.stringify(v.PARAMS));r.setRequestHeader("BX-APPCACHE-URL", v.PAGE_URL ? v.PAGE_URL : "");}r.onreadystatechange = function() {if (r.readyState != 4) { return; }var a = r.getResponseHeader("BX-RAND");var b = w.BX && w.BX.frameCache ? w.BX.frameCache : false;if (a != x || !((r.status >= 200 && r.status < 300) || r.status === 304 || r.status === 1223 || r.status === 0)){var f = {error:true, reason:a!=x?"bad_rand":"bad_status", url:u, xhr:r, status:r.status};if (w.BX && w.BX.ready && b){BX.ready(function() {setTimeout(function(){BX.onCustomEvent("onFrameDataRequestFail", [f]);}, 0);});}w.frameRequestFail = f;return;}if (b){b.onFrameDataReceived(r.responseText);if (!w.frameUpdateInvoked){b.update(false);}w.frameUpdateInvoked = true;}else{w.frameDataString = r.responseText;}};r.send();var p = w.performance;if (p && p.addEventListener && p.getEntries && p.setResourceTimingBufferSize){var e = 'resourcetimingbufferfull';var h = function() {if (w.BX && w.BX.frameCache && w.BX.frameCache.frameDataInserted){p.removeEventListener(e, h);}else {p.setResourceTimingBufferSize(p.getEntries().length + 50);}};p.addEventListener(e, h);}})(window, document);</script>
+	<script data-skip-moving="true">(function(w, d, n) {
+
+	var cl = "bx-core";
+	var ht = d.documentElement;
+	var htc = ht ? ht.className : undefined;
+	if (htc === undefined || htc.indexOf(cl) !== -1)
+	{
+	return;
+	}
+
+	var ua = n.userAgent;
+	if (/(iPad;)|(iPhone;)/i.test(ua))
+	{
+	cl += " bx-ios";
+	}
+	else if (/Android/i.test(ua))
+	{
+	cl += " bx-android";
+	}
+
+	cl += (/(ipad|iphone|android|mobile|touch)/i.test(ua) ? " bx-touch" : " bx-no-touch");
+
+	cl += w.devicePixelRatio && w.devicePixelRatio >= 2
+	? " bx-retina"
+	: " bx-no-retina";
+
+	var ieVersion = -1;
+	if (/AppleWebKit/.test(ua))
+	{
+	cl += " bx-chrome";
+	}
+	else if ((ieVersion = getIeVersion()) > 0)
+	{
+	cl += " bx-ie bx-ie" + ieVersion;
+	if (ieVersion > 7 && ieVersion < 10 && !isDoctype())
+	{
+	cl += " bx-quirks";
+	}
+	}
+	else if (/Opera/.test(ua))
+	{
+	cl += " bx-opera";
+	}
+	else if (/Gecko/.test(ua))
+	{
+	cl += " bx-firefox";
+	}
+
+	if (/Macintosh/i.test(ua))
+	{
+	cl += " bx-mac";
+	}
+
+	ht.className = htc ? htc + " " + cl : cl;
+
+	function isDoctype()
+	{
+	if (d.compatMode)
+	{
+	return d.compatMode == "CSS1Compat";
+	}
+
+	return d.documentElement && d.documentElement.clientHeight;
+	}
+
+	function getIeVersion()
+	{
+	if (/Opera/i.test(ua) || /Webkit/i.test(ua) || /Firefox/i.test(ua) || /Chrome/i.test(ua))
+	{
+	return -1;
+	}
+
+	var rv = -1;
+	if (!!(w.MSStream) && !(w.ActiveXObject) && ("ActiveXObject" in w))
+	{
+	rv = 11;
+	}
+	else if (!!d.documentMode && d.documentMode >= 10)
+	{
+	rv = 10;
+	}
+	else if (!!d.documentMode && d.documentMode >= 9)
+	{
+	rv = 9;
+	}
+	else if (d.attachEvent && !/Opera/.test(ua))
+	{
+	rv = 8;
+	}
+
+	if (rv == -1 || rv == 8)
+	{
+	var re;
+	if (n.appName == "Microsoft Internet Explorer")
+	{
+	re = new RegExp("MSIE ([0-9]+[\.0-9]*)");
+	if (re.exec(ua) != null)
+	{
+	rv = parseFloat(RegExp.$1);
+	}
+	}
+	else if (n.appName == "Netscape")
+	{
+	rv = 11;
+	re = new RegExp("Trident/.*rv:([0-9]+[\.0-9]*)");
+	if (re.exec(ua) != null)
+	{
+	rv = parseFloat(RegExp.$1);
+	}
+	}
+	}
+
+	return rv;
+	}
+
+	})(window, document, navigator);</script>
+
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300italic,400italic,500italic,700italic,400,300,500,700subset=latin,cyrillic-ext"  rel="stylesheet" />
+	<link href="https://chernogolovka.com/orangecow/styles/index.css?163178027642985"  rel="stylesheet" />
+	<link href="https://chernogolovka.com/orangecow/fonts/stylesheet.css?1626099731388"  rel="stylesheet" />
+	<link href="//opt-1530635.ssl.1c-bitrix-cdn.ru/bitrix/templates/aspro-priority/components/bitrix/news.list/orange_slider/style.css?161609131129"  rel="stylesheet" />
+	<link href="//opt-1530635.ssl.1c-bitrix-cdn.ru/bitrix/templates/aspro-priority/components/bitrix/news.list/expert/style.css?161609130149"  rel="stylesheet" />
+	<link href="//opt-1530635.ssl.1c-bitrix-cdn.ru/bitrix/templates/aspro-priority/components/bitrix/news.list/products/style.css?1616091313150"  rel="stylesheet" />
+	<link href="//opt-1530635.ssl.1c-bitrix-cdn.ru/bitrix/templates/aspro-priority/components/bitrix/news.list/advice/style.css?1616091297362"  rel="stylesheet" />
+	<link href="//opt-1530635.ssl.1c-bitrix-cdn.ru/bitrix/templates/aspro-priority/components/bitrix/news.list/fact/style.css?1616091301269"  rel="stylesheet" />
+	<link href="//opt-1530635.ssl.1c-bitrix-cdn.ru/bitrix/templates/aspro-priority/components/bitrix/news.list/magazine/style.css?1616091307150"  rel="stylesheet" />
+	<link href="//opt-1530635.ssl.1c-bitrix-cdn.ru/bitrix/templates/aspro-priority/css/fonts/font-awesome/css/font-awesome.min.css?161597392631000"  data-template-style="true"  rel="stylesheet" />
+	<link href="//opt-1530635.ssl.1c-bitrix-cdn.ru/bitrix/templates/aspro-priority/vendor/flexslider/flexslider.css?16159739276839"  data-template-style="true"  rel="stylesheet" />
+	<link href="//opt-1530635.ssl.1c-bitrix-cdn.ru/bitrix/templates/aspro-priority/vendor/owl/css/owl.carousel.min.css?15838239223351"  data-template-style="true"  rel="stylesheet" />
+	<link href="//opt-1530635.ssl.1c-bitrix-cdn.ru/bitrix/templates/aspro-priority/vendor/owl/css/owl.theme.default.min.css?15838239221013"  data-template-style="true"  rel="stylesheet" />
+	<link href="//opt-1530635.ssl.1c-bitrix-cdn.ru/bitrix/templates/aspro-priority/css/jquery.fancybox.css?16159739264108"  data-template-style="true"  rel="stylesheet" />
+	<link href="//opt-1530635.ssl.1c-bitrix-cdn.ru/bitrix/templates/aspro-priority/css/theme-elements.css?16159739264368"  data-template-style="true"  rel="stylesheet" />
+	<link href="//opt-1530635.ssl.1c-bitrix-cdn.ru/bitrix/templates/aspro-priority/css/theme-responsive.css?16159739261394"  data-template-style="true"  rel="stylesheet" />
+	<link href="//opt-1530635.ssl.1c-bitrix-cdn.ru/bitrix/templates/aspro-priority/css/print.min.css?161597392611756"  data-template-style="true"  rel="stylesheet" />
+	<link href="//opt-1530635.ssl.1c-bitrix-cdn.ru/bitrix/templates/aspro-priority/css/animation/animate.min.css?161597392652789"  data-template-style="true"  rel="stylesheet" />
+	<link href="//opt-1530635.ssl.1c-bitrix-cdn.ru/bitrix/templates/aspro-priority/css/jquery.mCustomScrollbar.min.css?161597392642839"  data-template-style="true"  rel="stylesheet" />
+	<link href="//opt-1530635.ssl.1c-bitrix-cdn.ru/bitrix/templates/aspro-priority/css/animation/animation_ext.css?16159739264934"  data-template-style="true"  rel="stylesheet" />
+	<link href="//opt-1530635.ssl.1c-bitrix-cdn.ru/bitrix/templates/aspro-priority/css/jquery.onoff.css?16159739261632"  data-template-style="true"  rel="stylesheet" />
+	<link href="//opt-1530635.ssl.1c-bitrix-cdn.ru/bitrix/templates/aspro-priority/css/bootstrap.min.css?161597392688745"  data-template-style="true"  rel="stylesheet" />
+	<link href="//opt-1530635.ssl.1c-bitrix-cdn.ru/bitrix/templates/aspro-priority/css/h1-normal.css?161597392677"  data-template-style="true"  rel="stylesheet" />
+	<link href="//opt-1530635.ssl.1c-bitrix-cdn.ru/bitrix/templates/.default/ajax/ajax.min.css?1583823921420"  data-template-style="true"  rel="stylesheet" />
+	<link href="//opt-1530635.ssl.1c-bitrix-cdn.ru/bitrix/templates/aspro-priority/css/width-3.css?1615973926901"  data-template-style="true"  rel="stylesheet" />
+	<link href="//opt-1530635.ssl.1c-bitrix-cdn.ru/bitrix/templates/aspro-priority/css/font-10.css?16159739261029"  data-template-style="true"  rel="stylesheet" />
+	<link href="//opt-1530635.ssl.1c-bitrix-cdn.ru/bitrix/tools/concept.quiz/css/template_styles.css?162687638186440"  data-template-style="true"  rel="stylesheet" />
+	<link href="//opt-1530635.ssl.1c-bitrix-cdn.ru/bitrix/templates/aspro-priority/styles.css?161875115820035"  data-template-style="true"  rel="stylesheet" />
+	<link href="//opt-1530635.ssl.1c-bitrix-cdn.ru/bitrix/templates/aspro-priority/template_styles.css?1625471185524780"  data-template-style="true"  rel="stylesheet" />
+	<link href="//opt-1530635.ssl.1c-bitrix-cdn.ru/bitrix/templates/aspro-priority/css/responsive.css?1636368165159983"  data-template-style="true"  rel="stylesheet" />
+	<link href="//opt-1530635.ssl.1c-bitrix-cdn.ru/bitrix/templates/aspro-priority/themes/CUSTOM_s1/colors.min.css?163342620534013"  data-template-style="true"  rel="stylesheet" />
+	<link href="//opt-1530635.ssl.1c-bitrix-cdn.ru/bitrix/templates/aspro-priority/bg_color/light/bgcolors.min.css?161597392754"  data-template-style="true"  rel="stylesheet" />
+	<link href="//opt-1530635.ssl.1c-bitrix-cdn.ru/bitrix/templates/aspro-priority/css/custom.css?163596849412708"  data-template-style="true"  rel="stylesheet" />
+	<link href="//opt-1530635.ssl.1c-bitrix-cdn.ru/bitrix/tools/concept.quiz/css/responsive.css?162687638113048"  data-template-style="true"  rel="stylesheet" />
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
 	<link rel="stylesheet" href="css/main.min.css?v=1640034000">
@@ -63,7 +207,7 @@
 										</svg>
 									</div>
 									<div class="logo">
-										<a href="/"><img src="//opt-1530635.ssl.1c-bitrix-cdn.ru/upload/CPriority/923/chgk-logo-color.png?158696867752776" alt="Черноголовка — производитель напитков, снеков и кондитерских изделий в России" title="Черноголовка — производитель напитков, снеков и кондитерских изделий в России" /></a>
+										<a href="/"><img src="images/logo.png" alt="Черноголовка — производитель напитков, снеков и кондитерских изделий в России" title="Черноголовка — производитель напитков, снеков и кондитерских изделий в России" /></a>
 									</div>
 								</div>
 								<div class="menu-only catalog_icons_Y icons_position_ view_type_BLOCK count_menu_full_count_4">
@@ -311,7 +455,7 @@
 							</svg>
 						</div>
 						<div class="logo">
-							<a href="/"><img src="//opt-1530635.ssl.1c-bitrix-cdn.ru/upload/CPriority/923/chgk-logo-color.png?158696867752776" alt="Черноголовка — производитель напитков, снеков и кондитерских изделий в России" title="Черноголовка — производитель напитков, снеков и кондитерских изделий в России" /></a>
+							<a href="/"><img src="images/logo.png" alt="Черноголовка — производитель напитков, снеков и кондитерских изделий в России" title="Черноголовка — производитель напитков, снеков и кондитерских изделий в России" /></a>
 						</div>
 					</div>
 					<div class="col-md-8 menu-block navs js-nav">
@@ -576,7 +720,7 @@
 			</div>
 			<div class="logo-block pull-left">
 				<div class="logo">
-					<a href="/"><img src="//opt-1530635.ssl.1c-bitrix-cdn.ru/upload/CPriority/923/chgk-logo-color.png?158696867752776" alt="Черноголовка — производитель напитков, снеков и кондитерских изделий в России" title="Черноголовка — производитель напитков, снеков и кондитерских изделий в России" /></a>
+					<a href="/"><img src="images/logo.png" alt="Черноголовка — производитель напитков, снеков и кондитерских изделий в России" title="Черноголовка — производитель напитков, снеков и кондитерских изделий в России" /></a>
 				</div>
 			</div>
 			<div class="right-icons pull-right">
@@ -613,7 +757,7 @@
 						</svg>
 						<div class="logo-wrapper">
 							<div class="logo">
-								<a href="/"><img src="//opt-1530635.ssl.1c-bitrix-cdn.ru/upload/CPriority/923/chgk-logo-color.png?158696867752776" alt="Черноголовка — производитель напитков, снеков и кондитерских изделий в России" title="Черноголовка — производитель напитков, снеков и кондитерских изделий в России" /></a>
+								<a href="/"><img src="images/logo.png" alt="Черноголовка — производитель напитков, снеков и кондитерских изделий в России" title="Черноголовка — производитель напитков, снеков и кондитерских изделий в России" /></a>
 							</div>
 						</div>
 						<div class="menu top">
@@ -982,20 +1126,21 @@
         <h3 class="section__title video__title">текстовой блок</h3>
 
         <div class="video__desc">
-            <p>
-                С рождения до 6 месяцев малыш бессознательно принимает ряд важных решений: жить и радоваться, доверять людям и звать на помощь, ожидать, что услышат и откликнутся на его потребности. В этот период поддержка родителей особенно важна.
-            </p>
-            <p>
-                Для того, чтобы помочь малышу сформировать здоровые жизненные установки и укрепить его доверие к вам, держите его на руках и смотрите на него во время кормления; заботливо прикасайтесь; говорите с ним и повторяйте за ним звуки.
-            </p>
+            С рождения до 6 месяцев малыш бессознательно принимает ряд важных решений: жить и радоваться, доверять людям и звать на помощь, ожидать, что услышат и откликнутся на его потребности. В этот период поддержка родителей особенно важна.
+            <br><br>Для того, чтобы помочь малышу сформировать здоровые жизненные установки и укрепить его доверие к вам, держите его на руках и смотрите на него во время кормления; заботливо прикасайтесь; говорите с ним и повторяйте за ним звуки.
         </div>
 
         <div class="video__player">
-            <div class="video__player__image" style="background-image: url(images/temp/video.jpeg);"></div>
-            <div class="video__player__label">Смотрите новую серию!</div>
-            <div class="video__player__play">
-                <i class="icon-play"></i>
+            <div class="video__label">
+                <div class="video__label__text">Смотрите новую серию!</div>
             </div>
+            <div class="video__screen">
+                <div class="video__image" style="background-image: url(images/temp/video.jpeg);"></div>
+                <div class="video__play">
+                    <i class="icon-play"></i>
+                </div>
+            </div>
+            
         </div>
 
     </div>
@@ -1764,7 +1909,7 @@
 					'COMPACT_FOOTER_MOBILE' : 'Y',
 				})
 			});
-	</script>
+	</script>images/logo.png
 	<script>
 		var jsControl = new JCTitleSearch3({
 			//'WAIT_IMAGE': '/bitrix/themes/.default/images/wait.gif',
