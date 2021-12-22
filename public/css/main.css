@@ -111,7 +111,8 @@
   .section__title {
     font-size: 22px; }
   .section__curved:before, .section__curved:after {
-    height: 50px; }
+    height: 50px;
+    background-size: 300vw auto; }
   .section__more {
     font-size: 16px; } }
 
