@@ -105,16 +105,8 @@
 		position: absolute;
 		left: 83%;
 		top: 5%;
-		background: url(../images/decors/stars-1.png) no-repeat;
-		background-size: cover;
 		width: 12%;
 		opacity: 0.5;
-
-		&:before {
-			content: " ";
-			padding-top: 244/281 * 100%;
-			display: block;
-		}
 	}
 
 	&__decor-2 {
@@ -122,16 +114,8 @@
 		position: absolute;
 		left: 5%;
 		top: 21%;
-		background: url(../images/decors/gypno-1.png) no-repeat;
-		background-size: cover;
 		width: 9%;
 		opacity: 0.5;
-
-		&:before {
-			content: " ";
-			padding-top: 230/170 * 100%;
-			display: block;
-		}
 	}
 }
 

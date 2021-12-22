@@ -1,4 +1,6 @@
 .slider-quotes {
+	position: relative;
+
 	&__slider {
 		position: relative;
 	}
@@ -157,6 +159,42 @@
 		}
 	}
 
+	&__decor-1 {
+		transform: rotate(110deg);
+		position: absolute;
+		left: 87%;
+		top: 25%;
+		width: 8%;
+		mix-blend-mode: multiply;
+	}
+
+	&__decor-2 {
+		transform: rotate(130deg);
+		position: absolute;
+		left: 7%;
+		top: 65%;
+		width: 9%;
+		mix-blend-mode: multiply;
+	}
+
+	&__decor-3 {
+		transform: rotate(-5deg);
+		position: absolute;
+		left: 16%;
+		top: 35%;
+		width: 7%;
+		mix-blend-mode: multiply;
+	}
+
+	&__decor-4 {
+		transform: rotate(185deg);
+		position: absolute;
+		left: 86%;
+		top: 75%;
+		width: 5%;
+		mix-blend-mode: multiply;
+	}
+
 	.slick-dots {
 		display: flex;
 		justify-content: center;
@@ -221,6 +259,30 @@
 		&__name,
 		&__btn-add {
 			font-size: 16px;
+		}
+
+		&__decor-1 {
+			left: 67%;
+			top: 25%;
+			width: 28%;
+		}
+
+		&__decor-2 {
+			left: 7%;
+			top: 85%;
+			width: 9%;
+		}
+
+		&__decor-3 {
+			left: 16%;
+			top: 35%;
+			width: 17%;
+		}
+
+		&__decor-4 {
+			left: 26%;
+			top: 25%;
+			width: 10%;
 		}
 	}
 }
