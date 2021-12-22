@@ -60,6 +60,10 @@
     background-image: url(../images/curved-bgs/orange.svg); }
   .section__curved--orange .section__curved__content {
     background: #f68c1f; }
+  .section__curved--light-orange:before, .section__curved--light-orange:after {
+    background-image: url(../images/curved-bgs/light-orange.svg); }
+  .section__curved--light-orange .section__curved__content {
+    background: #ffc525; }
   .section__curved--blue:before, .section__curved--blue:after {
     background-image: url(../images/curved-bgs/blue.svg); }
   .section__curved--blue .section__curved__content {
@@ -106,6 +110,8 @@
 @media (max-width: 599.98px) {
   .section__title {
     font-size: 22px; }
+  .section__curved:before, .section__curved:after {
+    height: 50px; }
   .section__more {
     font-size: 16px; } }
 
@@ -445,6 +451,8 @@
       overflow: hidden; }
       .slider-logos .slick-dots li.slick-active {
         opacity: 0.5 !important; }
+    .slider-logos .slick-dots button {
+      display: none; }
 
 @media (max-width: 991.98px) {
   .slider-logos__item {
@@ -453,15 +461,210 @@
 @media (max-width: 767.98px) {
   .slider-logos__item {
     width: 50%; }
-  .slider-logos__prev, .slider-logos__next {
-    font-size: 10px; }
   .slider-logos__button {
     font-size: 12px; } }
 
 @media (max-width: 599.98px) {
   .slider-logos__item {
     width: 100%; }
+  .slider-logos__prev, .slider-logos__next {
+    font-size: 10px; }
   .slider-logos .slick-dots li {
+    margin: 0 5px; } }
+
+.slider-quotes__slider {
+  position: relative; }
+
+.slider-quotes__buttons {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%; }
+  .slider-quotes__buttons > div {
+    display: flex;
+    justify-content: space-between; }
+
+.slider-quotes__prev, .slider-quotes__next {
+  transition: all 0.2s;
+  pointer-events: all;
+  padding: 1em;
+  border: 0;
+  border-radius: 0.33333em;
+  background: rgba(255, 255, 255, 0.4);
+  font-size: 16px;
+  line-height: 1;
+  color: #fff; }
+  .slider-quotes__prev:hover, .slider-quotes__next:hover {
+    background: rgba(255, 255, 255, 0.6); }
+  .slider-quotes__prev.slick-disabled, .slider-quotes__next.slick-disabled {
+    opacity: 0.5;
+    cursor: default; }
+    .slider-quotes__prev.slick-disabled:hover, .slider-quotes__next.slick-disabled:hover {
+      background: rgba(255, 255, 255, 0.4); }
+
+.slider-quotes__item {
+  display: none; }
+  .slider-quotes__item:first-child {
+    display: block; }
+
+.slider-quotes__center {
+  display: flex;
+  justify-content: center; }
+
+.slider-quotes__image {
+  flex: 0 0 auto;
+  width: 30%;
+  max-width: 400px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 100% 50%; }
+
+.slider-quotes__cloud {
+  flex: 1 1 auto;
+  max-width: 700px;
+  background: url("../images/quotes/cloud-bg.png") no-repeat;
+  background-size: 100% 100%;
+  padding: 90px;
+  display: flex;
+  align-items: center; }
+
+.slider-quotes__author {
+  flex: 0 0 auto;
+  width: 112px;
+  margin-right: 38px; }
+
+.slider-quotes__text {
+  flex: 0 0 auto;
+  width: calc(100% - 150px); }
+
+.slider-quotes__name {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: rgba(0, 0, 0, 0.8); }
+
+.slider-quotes__date {
+  margin: 10px 0;
+  font-size: 14px;
+  line-height: 1.3;
+  color: rgba(0, 0, 0, 0.5); }
+
+.slider-quotes__desc {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.8); }
+  .slider-quotes__desc a {
+    text-decoration: underline;
+    color: #30a757; }
+
+.slider-quotes__mark {
+  max-width: 50px;
+  margin: 0 auto;
+  background: #ffc525 url(../images/quotes/quote-mark.svg) no-repeat;
+  background-size: 101% auto; }
+  .slider-quotes__mark:before {
+    content: " ";
+    padding-top: 68.29268%;
+    display: block; }
+
+.slider-quotes__avatar {
+  border-radius: 50%;
+  background-size: cover;
+  margin-top: 45px; }
+  .slider-quotes__avatar:before {
+    content: " ";
+    padding-top: 100%;
+    display: block; }
+
+.slider-quotes__btn-add {
+  margin-top: 1.66667em;
+  font-size: 18px; }
+  .slider-quotes__btn-add > * {
+    transition: all 0.2s;
+    display: inline-block;
+    border: 0;
+    border-radius: 0.72222em;
+    padding: 0.72222em 1.66667em;
+    background: #ffc525;
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 1.36389;
+    color: #fff; }
+    .slider-quotes__btn-add > *:hover {
+      background: #ffbe0c; }
+
+.slider-quotes .slick-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px; }
+  .slider-quotes .slick-dots li {
+    margin: 0 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.3;
+    overflow: hidden; }
+    .slider-quotes .slick-dots li.slick-active {
+      opacity: 0.8 !important; }
+  .slider-quotes .slick-dots button {
+    display: none; }
+
+@media (max-width: 991.98px) {
+  .slider-quotes__center {
+    display: block; }
+  .slider-quotes__image {
+    height: 60vw;
+    max-height: 400px;
+    margin: 0 auto;
+    background-size: auto 100%;
+    width: 100%;
+    background-position: 50% 100%;
+    margin-bottom: -5vw; }
+  .slider-quotes__cloud {
+    margin: 0 auto; } }
+
+@media (max-width: 767.98px) {
+  .slider-quotes__cloud {
+    padding: 80px 60px; }
+  .slider-quotes__avatar {
+    margin-top: 25px; }
+  .slider-quotes__desc {
+    font-size: 13px; }
+  .slider-quotes__name, .slider-quotes__btn-add {
+    font-size: 16px; } }
+
+@media (max-width: 599.98px) {
+  .slider-quotes__prev, .slider-quotes__next {
+    font-size: 10px; }
+  .slider-quotes__avatar {
+    display: none; }
+  .slider-quotes__cloud {
+    display: block;
+    padding: 13vw; }
+  .slider-quotes__author, .slider-quotes__text {
+    width: 100%; }
+  .slider-quotes__name {
+    font-size: 12px; }
+  .slider-quotes__date {
+    margin: 5px 0;
+    font-size: 12px; }
+  .slider-quotes__desc {
+    font-size: 12px; }
+    .slider-quotes__desc__crop {
+      max-height: 3em;
+      overflow: hidden; }
+  .slider-quotes__mark {
+    width: 8vw;
+    max-width: 30px;
+    margin: 0 0 3vw 0; }
+  .slider-quotes__btn-add {
+    margin-top: 1em;
+    text-align: center;
+    font-size: 12px; }
+  .slider-quotes .slick-dots li {
     margin: 0 5px; } }
 
 .promo__image {

@@ -97,7 +97,9 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_Notify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/Notify */ "./src/js/modules/Notify.js");
 /* harmony import */ var _modules_SliderLogos__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/SliderLogos */ "./src/js/modules/SliderLogos.js");
-/* harmony import */ var _modules_LessMore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/LessMore */ "./src/js/modules/LessMore.js");
+/* harmony import */ var _modules_SliderQuotes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/SliderQuotes */ "./src/js/modules/SliderQuotes.js");
+/* harmony import */ var _modules_LessMore__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/LessMore */ "./src/js/modules/LessMore.js");
+
 
 
 
@@ -249,6 +251,38 @@ $(function () {
   SliderLogos.init();
 });
 /* harmony default export */ __webpack_exports__["default"] = (SliderLogos);
+
+/***/ }),
+
+/***/ "./src/js/modules/SliderQuotes.js":
+/*!****************************************!*\
+  !*** ./src/js/modules/SliderQuotes.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// import $ from "jquery";
+var SliderQuotes = {
+  init: function init() {
+    $(".slider-quotes__root").each(function () {
+      $(this).find(".slider-quotes__list").slick({
+        dots: true,
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: $(this).find(".slider-quotes__prev"),
+        appendDots: $(this).find(".slider-quotes__dots"),
+        nextArrow: $(this).find(".slider-quotes__next")
+      });
+    });
+  }
+};
+$(function () {
+  SliderQuotes.init();
+});
+/* harmony default export */ __webpack_exports__["default"] = (SliderQuotes);
 
 /***/ })
 

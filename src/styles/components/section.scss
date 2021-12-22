@@ -44,6 +44,17 @@
 			}
 		}
 
+		&--light-orange {
+			&:before,
+			&:after {
+				background-image: url(../images/curved-bgs/light-orange.svg);
+			}
+
+			.section__curved__content {
+				background: #ffc525;
+			}
+		}
+
 		&--blue {
 			&:before,
 			&:after {
@@ -129,6 +140,13 @@
 	.section {
 		&__title {
 			font-size: 22px;
+		}
+
+		&__curved {
+			&:before,
+			&:after {
+				height: 50px;
+			}
 		}
 
 		&__more {

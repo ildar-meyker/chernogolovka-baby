@@ -113,6 +113,10 @@
 				opacity: 0.5 !important;
 			}
 		}
+
+		button {
+			display: none;
+		}
 	}
 }
 
@@ -130,11 +134,6 @@
 			width: 50%;
 		}
 
-		&__prev,
-		&__next {
-			font-size: 10px;
-		}
-
 		&__button {
 			font-size: 12px;
 		}
@@ -145,6 +144,11 @@
 	.slider-logos {
 		&__item {
 			width: 100%;
+		}
+
+		&__prev,
+		&__next {
+			font-size: 10px;
 		}
 
 		.slick-dots {
