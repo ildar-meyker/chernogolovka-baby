@@ -5,11 +5,13 @@
 @import "./components/nav-pics";
 @import "./components/slider-logos";
 @import "./components/slider-quotes";
+@import "./components/slider-cards";
 @import "./components/promo";
 @import "./components/video";
 @import "./components/less-more";
 
 .page--orangecow {
+	min-width: 320px;
 	letter-spacing: 0.05em;
 
 	.header-v6 {

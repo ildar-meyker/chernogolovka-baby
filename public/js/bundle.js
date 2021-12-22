@@ -98,7 +98,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_Notify__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/Notify */ "./src/js/modules/Notify.js");
 /* harmony import */ var _modules_SliderLogos__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/SliderLogos */ "./src/js/modules/SliderLogos.js");
 /* harmony import */ var _modules_SliderQuotes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/SliderQuotes */ "./src/js/modules/SliderQuotes.js");
-/* harmony import */ var _modules_LessMore__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/LessMore */ "./src/js/modules/LessMore.js");
+/* harmony import */ var _modules_SliderCards__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/SliderCards */ "./src/js/modules/SliderCards.js");
+/* harmony import */ var _modules_LessMore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/LessMore */ "./src/js/modules/LessMore.js");
+
 
 
 
@@ -200,6 +202,64 @@ $(function () {
   Notify.init();
 });
 /* harmony default export */ __webpack_exports__["default"] = (Notify);
+
+/***/ }),
+
+/***/ "./src/js/modules/SliderCards.js":
+/*!***************************************!*\
+  !*** ./src/js/modules/SliderCards.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// import $ from "jquery";
+var SliderCards = {
+  _$sliders: $(),
+  _destroySliders: function _destroySliders() {
+    try {
+      this._$sliders.each(function () {
+        $(this).find(".products").slick("unslick");
+        $(this).find(".section__more").show();
+      });
+    } catch (e) {}
+  },
+  _initSliders: function _initSliders() {
+    this._$sliders.each(function () {
+      $(this).find(".products").slick({
+        dots: true,
+        infinite: false,
+        arrows: false,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        appendDots: $(this).find(".slider-cards__dots"),
+        responsive: [{
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }]
+      });
+      $(this).find(".section__more").hide();
+    });
+  },
+  _onResize: function _onResize(mql) {
+    mql.matches ? this._destroySliders() : this._initSliders();
+  },
+  init: function init() {
+    this._$sliders = $(".slider-cards");
+    var mql = window.matchMedia("(min-width: 992px)");
+    mql.addListener(this._onResize.bind(this));
+
+    this._onResize(mql);
+  }
+};
+$(function () {
+  SliderCards.init();
+});
+/* harmony default export */ __webpack_exports__["default"] = (SliderCards);
 
 /***/ }),
 

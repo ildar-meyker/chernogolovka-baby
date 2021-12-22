@@ -124,11 +124,6 @@
 
 @media (max-width: 767.98px) {
 	.nav-pics {
-	}
-}
-
-@media (max-width: 599.98px) {
-	.nav-pics {
 		&:before {
 			height: 35px;
 		}
@@ -149,7 +144,7 @@
 		}
 
 		&__image {
-			max-width: 240px;
+			max-width: 300px;
 			margin: 0 auto;
 		}
 
@@ -159,6 +154,14 @@
 
 		&__title {
 			font-size: 20px;
+		}
+	}
+}
+
+@media (max-width: 599.98px) {
+	.nav-pics {
+		&__image {
+			max-width: 240px;
 		}
 	}
 }

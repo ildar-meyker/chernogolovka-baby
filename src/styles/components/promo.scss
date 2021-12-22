@@ -11,3 +11,16 @@
 		}
 	}
 }
+
+@media (max-width: 599.98px) {
+	.promo {
+		&__image {
+			background-position: 70% 50%;
+			background-size: auto 100%;
+
+			&:before {
+				padding-top: 60%;
+			}
+		}
+	}
+}
