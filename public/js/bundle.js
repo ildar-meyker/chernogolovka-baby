@@ -216,7 +216,7 @@ __webpack_require__.r(__webpack_exports__);
 var SliderLogos = {
   init: function init() {
     $(".slider-logos__root").each(function () {
-      $(this).find("#slider-logos__list").slick({
+      $(this).find(".slider-logos__list").slick({
         dots: true,
         infinite: false,
         slidesToShow: 4,

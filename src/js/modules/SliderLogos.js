@@ -4,7 +4,7 @@ const SliderLogos = {
 	init() {
 		$(".slider-logos__root").each(function () {
 			$(this)
-				.find("#slider-logos__list")
+				.find(".slider-logos__list")
 				.slick({
 					dots: true,
 					infinite: false,
