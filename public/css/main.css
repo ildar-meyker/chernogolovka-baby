@@ -924,6 +924,54 @@
   .less-more__button.shown {
     display: inline-block; }
 
+.nav-icons {
+  font-size: 60px; }
+  .nav-icons__row {
+    position: relative; }
+  .nav-icons__list {
+    display: flex;
+    margin: 0 -0.41667em; }
+  .nav-icons__item {
+    width: 1.91667em;
+    box-sizing: content-box;
+    padding: 0 0.41667em;
+    text-align: center; }
+  .nav-icons__image {
+    height: 1em;
+    display: flex;
+    align-items: flex-end; }
+    .nav-icons__image svg {
+      height: 100%;
+      width: 100%; }
+    .nav-icons__image--reviews svg {
+      height: 70%; }
+  .nav-icons__title {
+    font-size: 0.23333em;
+    line-height: 1.2;
+    color: #303030cc;
+    margin-top: 1.07143em; }
+  .nav-icons__next, .nav-icons__prev {
+    transition: all 0.2s;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    padding: 0.5em;
+    border: 0;
+    border-radius: 0.625em;
+    font-size: 16px;
+    line-height: 1;
+    background: #ffc525;
+    color: #fff; }
+    .nav-icons__next:hover, .nav-icons__prev:hover {
+      background: #30a657;
+      border-color: transparent;
+      color: #fff; }
+    .nav-icons__next.slick-disabled, .nav-icons__prev.slick-disabled {
+      display: none; }
+  .nav-icons__next {
+    right: 0; }
+
 .page--orangecow {
   min-width: 320px;
   letter-spacing: 0.05em; }
