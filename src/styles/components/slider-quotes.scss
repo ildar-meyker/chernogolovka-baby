@@ -164,17 +164,19 @@
 		transform: rotate(110deg);
 		position: absolute;
 		left: 87%;
-		top: 25%;
-		width: 8%;
+		top: 20%;
+		width: 7vw;
+		max-width: 128px;
 		mix-blend-mode: multiply;
 	}
 
 	&__decor-2 {
 		transform: rotate(130deg);
 		position: absolute;
-		left: 7%;
-		top: 65%;
-		width: 9%;
+		left: 10%;
+		top: 68%;
+		width: 6vw;
+		max-width: 110px;
 		mix-blend-mode: multiply;
 	}
 
@@ -182,17 +184,19 @@
 		transform: rotate(-5deg);
 		position: absolute;
 		left: 16%;
-		top: 35%;
-		width: 7%;
+		top: 15%;
+		width: 6vw;
+		max-width: 97px;
 		mix-blend-mode: multiply;
 	}
 
 	&__decor-4 {
 		transform: rotate(185deg);
 		position: absolute;
-		left: 86%;
-		top: 75%;
-		width: 5%;
+		left: 79%;
+		top: 70%;
+		width: 4vw;
+		max-width: 70px;
 		mix-blend-mode: multiply;
 	}
 
@@ -270,25 +274,25 @@
 		&__decor-1 {
 			left: 67%;
 			top: 25%;
-			width: 28%;
+			width: 28vw;
 		}
 
 		&__decor-2 {
 			left: 7%;
 			top: 85%;
-			width: 9%;
+			width: 9vw;
 		}
 
 		&__decor-3 {
-			left: 16%;
-			top: 35%;
-			width: 17%;
+			left: 6%;
+			top: 25%;
+			width: 17vw;
 		}
 
 		&__decor-4 {
 			left: 26%;
-			top: 25%;
-			width: 10%;
+			top: 15%;
+			width: 10vw;
 		}
 	}
 }

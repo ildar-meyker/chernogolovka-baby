@@ -1,8 +1,10 @@
 .slider-videos {
+	position: relative;
 	margin: 120px 0;
 
 	&__slider {
 		position: relative;
+		padding-top: 45px;
 	}
 
 	&__body {
@@ -113,6 +115,86 @@
 		}
 	}
 
+	&__decor-1 {
+		transform: rotate(110deg);
+		position: absolute;
+		left: 87%;
+		top: 70%;
+		width: 7vw;
+		max-width: 128px;
+		mix-blend-mode: exclusion;
+		opacity: 0.14;
+	}
+
+	&__decor-2 {
+		transform: rotate(-60deg);
+		position: absolute;
+		left: 37%;
+		top: 80%;
+		width: 3vw;
+		max-width: 55px;
+		mix-blend-mode: exclusion;
+		opacity: 0.14;
+	}
+
+	&__decor-3 {
+		transform: rotate(-5deg);
+		position: absolute;
+		left: 6%;
+		top: 15%;
+		width: 6vw;
+		max-width: 97px;
+		mix-blend-mode: exclusion;
+		opacity: 0.14;
+	}
+
+	&__decor-4 {
+		transform: rotate(185deg);
+		position: absolute;
+		left: 88%;
+		top: 4%;
+		width: 4vw;
+		max-width: 70px;
+		mix-blend-mode: exclusion;
+		opacity: 0.14;
+	}
+
+	&__sticker {
+		position: absolute;
+		left: 20%;
+		top: 0;
+		width: calc(min(30vw, 385px));
+		transform: translate(-50%, -50%);
+
+		&:before {
+			content: " ";
+			padding-top: 500/385 * 100%;
+			display: block;
+		}
+
+		&--back {
+			z-index: -1;
+		}
+
+		&--cover {
+			z-index: 10;
+		}
+
+		&__1 {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 90%;
+		}
+
+		&__2 {
+			position: absolute;
+			top: 38%;
+			left: 50%;
+			width: 48%;
+		}
+	}
+
 	.slick-slide {
 		line-height: 0;
 	}
@@ -163,6 +245,10 @@
 			margin: 0;
 		}
 
+		&__slider {
+			padding-top: 20px;
+		}
+
 		&__prev,
 		&__next {
 			visibility: hidden;
@@ -170,6 +256,10 @@
 
 		&__play {
 			font-size: 4vw;
+		}
+
+		&__sticker {
+			display: none;
 		}
 	}
 }
