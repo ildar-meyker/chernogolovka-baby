@@ -1,0 +1,13 @@
+.nav-bread {
+	display: flex;
+	margin-top: 20px;
+	font-size: 12px;
+
+	&__item {
+		color: #303030cc;
+	}
+
+	&__sep {
+		margin: 0 10px;
+	}
+}

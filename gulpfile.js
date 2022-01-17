@@ -161,9 +161,9 @@ gulp.task("watch", function () {
 		gulp.series("filelist", "grunt-assemble", "reload")
 	);
 	gulp.watch("src/styles/**/*", gulp.series("sprite", "styles"));
-	gulp.watch("src/js/**", gulp.series("scripts", "reload"));
-	gulp.watch("src/images/**", gulp.series("images", "reload"));
-	gulp.watch("src/uploads/**", gulp.series("uploads", "reload"));
+	gulp.watch("src/js/**/*", gulp.series("scripts", "reload"));
+	gulp.watch("src/images/**/*", gulp.series("images", "reload"));
+	gulp.watch("src/uploads/**/*", gulp.series("uploads", "reload"));
 	gulp.watch(path.assets, gulp.series("copy", "reload"));
 });
 

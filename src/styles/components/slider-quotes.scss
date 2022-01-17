@@ -69,6 +69,7 @@
 	&__cloud {
 		flex: 1 1 auto;
 		max-width: 700px;
+		min-height: 450px;
 		background: url("../images/quotes/cloud-bg.png") no-repeat;
 		background-size: 100% 100%;
 		padding: 90px;
@@ -116,7 +117,7 @@
 		max-width: 50px;
 		margin: 0 auto;
 		background: #ffc525 url(../images/quotes/quote-mark.svg) no-repeat;
-		background-size: 101% auto;
+		background-size: cover;
 
 		&:before {
 			content: " ";
@@ -294,18 +295,22 @@
 			font-size: 10px;
 		}
 
-		&__avatar {
-			display: none;
-		}
-
 		&__cloud {
-			display: block;
 			padding: 13vw;
+			min-height: 220px;
 		}
 
-		&__author,
+		&__author {
+			width: 30px;
+			margin-right: 20px;
+		}
+
 		&__text {
-			width: 100%;
+			width: calc(100% - 50px);
+		}
+
+		&__avatar {
+			margin-top: 10px;
 		}
 
 		&__name {
@@ -334,7 +339,6 @@
 
 		&__btn-add {
 			margin-top: 1em;
-			text-align: center;
 			font-size: 12px;
 		}
 

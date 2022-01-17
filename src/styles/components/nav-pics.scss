@@ -16,6 +16,19 @@
 		background-position: 50% 100%;
 	}
 
+	&--2 {
+		&:before,
+		&:after {
+			background-image: url(../images/curved-bgs/light-blue--2.svg);
+		}
+	}
+
+	&__glue {
+		height: 200px;
+		margin-bottom: -200px;
+		background: #f5f7fe;
+	}
+
 	&__content {
 		background: #f5f7fe;
 	}

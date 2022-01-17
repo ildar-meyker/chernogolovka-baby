@@ -3,6 +3,14 @@ title: Главная
 layout: default.hbs
 ---
 
+<div class="section__center">
+    <nav class="nav-bread">
+        <a href="#" class="nav-bread__item">Главная</a>  
+        <span class="nav-bread__sep">—</span>    
+        <a href="#" class="nav-bread__item">Продукция</a>      
+    </nav>
+</div>
+
 <nav class="nav-slider">
     <div class="section__center">
         <button type="button" class="nav-slider__prev">
@@ -83,7 +91,6 @@ layout: default.hbs
         </button>
     </div>
 </nav>
-
 
 <section class="slider-cards">
     <div class="section__center">
@@ -288,6 +295,6 @@ layout: default.hbs
     </div>
 </section>
 
-{{> slider-quotes }}
+{{> slider-reviews }}
 
 {{> slider-logos }}

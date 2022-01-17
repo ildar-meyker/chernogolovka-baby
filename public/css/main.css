@@ -290,6 +290,14 @@
 .nav-pics:after {
   background-position: 50% 100%; }
 
+.nav-pics--2:before, .nav-pics--2:after {
+  background-image: url(../images/curved-bgs/light-blue--2.svg); }
+
+.nav-pics__glue {
+  height: 200px;
+  margin-bottom: -200px;
+  background: #f5f7fe; }
+
 .nav-pics__content {
   background: #f5f7fe; }
 
@@ -548,6 +556,7 @@
   .slider-quotes__cloud {
     flex: 1 1 auto;
     max-width: 700px;
+    min-height: 450px;
     background: url("../images/quotes/cloud-bg.png") no-repeat;
     background-size: 100% 100%;
     padding: 90px;
@@ -581,7 +590,7 @@
     max-width: 50px;
     margin: 0 auto;
     background: #ffc525 url(../images/quotes/quote-mark.svg) no-repeat;
-    background-size: 101% auto; }
+    background-size: cover; }
     .slider-quotes__mark:before {
       content: " ";
       padding-top: 68.29268%;
@@ -702,13 +711,16 @@
 @media (max-width: 599.98px) {
   .slider-quotes__prev, .slider-quotes__next {
     font-size: 10px; }
-  .slider-quotes__avatar {
-    display: none; }
   .slider-quotes__cloud {
-    display: block;
-    padding: 13vw; }
-  .slider-quotes__author, .slider-quotes__text {
-    width: 100%; }
+    padding: 13vw;
+    min-height: 220px; }
+  .slider-quotes__author {
+    width: 30px;
+    margin-right: 20px; }
+  .slider-quotes__text {
+    width: calc(100% - 50px); }
+  .slider-quotes__avatar {
+    margin-top: 10px; }
   .slider-quotes__name {
     font-size: 12px; }
   .slider-quotes__date {
@@ -725,7 +737,6 @@
     margin: 0 0 3vw 0; }
   .slider-quotes__btn-add {
     margin-top: 1em;
-    text-align: center;
     font-size: 12px; }
   .slider-quotes .slick-dots li {
     margin: 0 5px; } }
@@ -1013,12 +1024,24 @@
   .nav-slider .swiper-slide {
     font-size: 12px; } }
 
+.nav-bread {
+  display: flex;
+  margin-top: 20px;
+  font-size: 12px; }
+  .nav-bread__item {
+    color: #303030cc; }
+  .nav-bread__sep {
+    margin: 0 10px; }
+
 .page--orangecow {
   min-width: 320px;
   letter-spacing: 0.05em; }
   .page--orangecow .header-v6 {
-    padding: 22px 0; }
+    padding: 22px 0;
+    border-bottom: 0; }
   .page--orangecow #mobileheader {
     height: 77px; }
   .page--orangecow #mobileheader .logo {
     margin-top: 5px; }
+  .page--orangecow #mobileheader .mobileheader-v1 {
+    border-bottom: 0; }

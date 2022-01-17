@@ -10,6 +10,7 @@
 @import "./components/video";
 @import "./components/less-more";
 @import "./components/nav-slider";
+@import "./components/nav-bread";
 
 .page--orangecow {
 	min-width: 320px;
@@ -17,6 +18,7 @@
 
 	.header-v6 {
 		padding: 22px 0;
+		border-bottom: 0;
 	}
 
 	#mobileheader {
@@ -25,5 +27,8 @@
 
 	#mobileheader .logo {
 		margin-top: 5px;
+	}
+	#mobileheader .mobileheader-v1 {
+		border-bottom: 0;
 	}
 }
