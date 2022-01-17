@@ -101,6 +101,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_SliderCards__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/SliderCards */ "./src/js/modules/SliderCards.js");
 /* harmony import */ var _modules_LessMore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/LessMore */ "./src/js/modules/LessMore.js");
 /* harmony import */ var _modules_NavSlider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/NavSlider */ "./src/js/modules/NavSlider.js");
+/* harmony import */ var _modules_SliderVideos__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/SliderVideos */ "./src/js/modules/SliderVideos.js");
+
 
 
 
@@ -383,6 +385,50 @@ $(function () {
   SliderQuotes.init();
 });
 /* harmony default export */ __webpack_exports__["default"] = (SliderQuotes);
+
+/***/ }),
+
+/***/ "./src/js/modules/SliderVideos.js":
+/*!****************************************!*\
+  !*** ./src/js/modules/SliderVideos.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+// <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+// <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+// import $ from "jquery";
+// import "slick-carousel";
+// import "slick-carousel/slick/slick.scss";
+var SliderVideos = {
+  init: function init() {
+    $(".slider-videos").each(function () {
+      $(this).find(".slider-videos__list").slick({
+        dots: true,
+        infinite: false,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        prevArrow: $(this).find(".slider-videos__prev"),
+        appendDots: $(this).find(".slider-videos__dots"),
+        nextArrow: $(this).find(".slider-videos__next"),
+        responsive: [{
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }]
+      });
+    });
+  }
+};
+$(function () {
+  SliderVideos.init();
+});
+/* harmony default export */ __webpack_exports__["default"] = (SliderVideos);
 
 /***/ })
 

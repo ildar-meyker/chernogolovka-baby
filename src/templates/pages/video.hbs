@@ -1,0 +1,51 @@
+---
+title: Главная
+layout: default.hbs
+---
+
+
+
+<div class="slider-videos">
+    <div class="section__center">
+        <h3 class="section__title">Другие серии</h3>
+    </div>
+
+    <div class="section__curved section__curved--dark-blue">
+        <div class="section__curved__content">
+            <div class="slider-videos__slider">
+                <div class="section__center">
+                    <div class="slider-videos__body">
+                        <div class="slider-videos__list">
+                            {{#repeat 8}}
+                            <div class="slider-videos__item">
+                                <div class="slider-videos__border">
+                                    <div class="slider-videos__image" style="background-image: url(images/temp/video.jpeg);"></div>
+                                    <button type="button" class="slider-videos__play">
+                                        <i class="icon-play"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            {{/repeat}}
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-videos__buttons">
+                    <div class="section__center">
+                        <button type="button" class="slider-videos__prev">
+                            <i class="icon-arrow-left"></i>
+                        </button>
+                        <button type="button" class="slider-videos__next">
+                            <i class="icon-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-videos__dots"></div>
+        </div>
+    </div>
+</div>
+
+
+{{> slider-quotes }}
+
+{{> slider-logos }}

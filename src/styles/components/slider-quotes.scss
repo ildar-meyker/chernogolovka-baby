@@ -22,12 +22,12 @@
 	&__next {
 		transition: all 0.2s;
 		pointer-events: all;
-		padding: 1em;
+		padding: 0.45em;
 		border: 0;
 		border-radius: 10/30 + em;
 		background: rgba(#fff, 0.4);
-		font-size: 16px;
-		line-height: 1;
+		font-size: 30px;
+		line-height: 0;
 		color: #fff;
 
 		&:hover {
@@ -245,6 +245,11 @@
 
 @media (max-width: 767.98px) {
 	.slider-quotes {
+		&__prev,
+		&__next {
+			visibility: hidden;
+		}
+
 		&__cloud {
 			padding: 80px 60px;
 		}
@@ -290,11 +295,6 @@
 
 @media (max-width: 599.98px) {
 	.slider-quotes {
-		&__prev,
-		&__next {
-			font-size: 10px;
-		}
-
 		&__cloud {
 			padding: 13vw;
 			min-height: 220px;
@@ -343,6 +343,8 @@
 		}
 
 		.slick-dots {
+			margin-top: 25px;
+
 			li {
 				margin: 0 5px;
 			}

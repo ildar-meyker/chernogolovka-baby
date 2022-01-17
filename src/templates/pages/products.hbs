@@ -4,11 +4,10 @@ layout: default.hbs
 ---
 
 <div class="section__center">
-    <nav class="nav-bread">
-        <a href="#" class="nav-bread__item">Главная</a>  
-        <span class="nav-bread__sep">—</span>    
-        <a href="#" class="nav-bread__item">Продукция</a>      
-    </nav>
+    <ul class="breadcrumb" id="navigation" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/" title="Главная" itemprop="item"><span itemprop="name">Главная</span></a><meta itemprop="position" content="1"></li>
+        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/company/" title="О компании" itemprop="item"><span itemprop="name">Продукция</span></a><meta itemprop="position" content="2"></li>
+    </ul>
 </div>
 
 <nav class="nav-slider">
