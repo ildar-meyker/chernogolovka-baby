@@ -3,75 +3,66 @@ title: Главная
 layout: default.hbs
 ---
 
-<nav class="nav-icons">
+<nav class="nav-slider">
     <div class="section__center">
-        <div class="nav-icons__row">
-            <button type="button" class="nav-icons__prev">
-                <i class="icon-arrow-left"></i>
-            </button>
-            <div class="nav-icons__list">
-                <div class="nav-icons__item">
-                    <div class="nav-icons__image">
+        <button type="button" class="nav-slider__prev">
+            <i class="icon-arrow-left"></i>
+        </button>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <a href="#" class="swiper-slide active">
+                    <div class="nav-slider__icon">
                         <svg class="icon">
                             <use xlink:href="images/nav-icons/sprite-1.svg#baby-juice"></use>
                         </svg>
                     </div>
-                    <div class="nav-icons__title">Детский сок</div>
-                </div>
-                <div class="nav-icons__item">
-                    <div class="nav-icons__image">
+                    <div class="nav-slider__text">Детский сок</div>
+                </a>
+                <a href="#" class="swiper-slide">
+                    <div class="nav-slider__icon">
                         <svg class="icon">
                             <use xlink:href="images/nav-icons/sprite-1.svg#baby-water"></use>
                         </svg>
                     </div>
-                    <div class="nav-icons__title">Детская вода</div>
-                </div>
-                <div class="nav-icons__item">
-                    <div class="nav-icons__image">
+                    <div class="nav-slider__text">Детская вода</div>
+                </a>
+                <a href="#" class="swiper-slide">
+                    <div class="nav-slider__icon">
                         <svg class="icon">
                             <use xlink:href="images/nav-icons/sprite-1.svg#fruit-puree"></use>
                         </svg>
                     </div>
-                    <div class="nav-icons__title">Фруктовое пюре</div>
-                </div>
-                <div class="nav-icons__item">
-                    <div class="nav-icons__image">
+                    <div class="nav-slider__text">Фруктовые пюре</div>
+                </a>
+                <a href="#" class="swiper-slide">
+                    <div class="nav-slider__icon">
                         <svg class="icon">
                             <use xlink:href="images/nav-icons/sprite-1.svg#drinking-porridge"></use>
                         </svg>
                     </div>
-                    <div class="nav-icons__title">Питьевые каши</div>
-                </div>
-                <div class="nav-icons__item">
-                    <div class="nav-icons__image">
+                    <div class="nav-slider__text">Питьевые каши</div>
+                </a>
+                <a href="#" class="swiper-slide">
+                    <div class="nav-slider__icon">
                         <svg class="icon">
                             <use xlink:href="images/nav-icons/sprite-1.svg#ready-made-food"></use>
                         </svg>
                     </div>
-                    <div class="nav-icons__title">Готовые блюда</div>
-                </div>
-                <div class="nav-icons__item">
-                    <div class="nav-icons__image">
-                        <svg class="icon">
-                            <use xlink:href="images/nav-icons/sprite-1.svg#ready-made-food"></use>
-                        </svg>
-                    </div>
-                    <div class="nav-icons__title">Готовые блюда</div>
-                </div>
-                <div class="nav-icons__item">
-                    <div class="nav-icons__image nav-icons__image--reviews">
+                    <div class="nav-slider__text">Готовые блюда</div>
+                </a>
+                <a href="#" class="swiper-slide">
+                    <div class="nav-slider__icon nav-slider__icon--reviews">
                         <svg class="icon">
                             <use xlink:href="images/nav-icons/sprite-1.svg#reviews"></use>
                         </svg>
                     </div>
-                    <div class="nav-icons__title">Отзывы</div>
-                </div>
+                    <div class="nav-slider__text">Отзывы</div>
+                </a>
             </div>
-            <button type="button" class="nav-icons__next">
-                <i class="icon-arrow-right"></i>
-            </button>
         </div>
-        
+        <button type="button" class="nav-slider__next">
+            <i class="icon-arrow-right"></i>
+        </button>
     </div>
 </nav>
 

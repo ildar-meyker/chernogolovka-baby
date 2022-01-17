@@ -100,6 +100,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_SliderQuotes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/SliderQuotes */ "./src/js/modules/SliderQuotes.js");
 /* harmony import */ var _modules_SliderCards__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/SliderCards */ "./src/js/modules/SliderCards.js");
 /* harmony import */ var _modules_LessMore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/LessMore */ "./src/js/modules/LessMore.js");
+/* harmony import */ var _modules_NavSlider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/NavSlider */ "./src/js/modules/NavSlider.js");
+
 
 
 
@@ -159,6 +161,44 @@ $(function () {
   LessMore.init();
 });
 /* harmony default export */ __webpack_exports__["default"] = (LessMore);
+
+/***/ }),
+
+/***/ "./src/js/modules/NavSlider.js":
+/*!*************************************!*\
+  !*** ./src/js/modules/NavSlider.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@7.4.1/swiper-bundle.min.css">
+// <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+// <script src="https://cdn.jsdelivr.net/npm/swiper@7.4.1/swiper-bundle.min.js"></script>
+// import $ from "jquery";
+// import Swiper from "swiper/bundle";
+// import "swiper/css/bundle";
+var NavSlider = {
+  init: function init() {
+    $(".nav-slider").each(function () {
+      new Swiper($(this).find(".swiper")[0], {
+        mousewheel: {
+          forceToAxis: true
+        },
+        slidesPerView: "auto",
+        navigation: {
+          prevEl: $(this).find(".nav-slider__prev")[0],
+          nextEl: $(this).find(".nav-slider__next")[0]
+        }
+      });
+    });
+  }
+};
+$(function () {
+  NavSlider.init();
+});
+/* harmony default export */ __webpack_exports__["default"] = (NavSlider);
 
 /***/ }),
 
