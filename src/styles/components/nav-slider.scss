@@ -19,10 +19,15 @@
 		font-size: 20px;
 		color: #fff;
 		cursor: pointer;
+		visibility: hidden;
+
+		&[aria-label] {
+			visibility: visible;
+		}
 	}
 
 	&__prev {
-		left: 0;
+		left: 20px;
 
 		i {
 			display: block;
@@ -31,7 +36,7 @@
 	}
 
 	&__next {
-		right: 0;
+		right: 20px;
 
 		i {
 			display: block;
@@ -46,6 +51,10 @@
 		svg {
 			height: 1em;
 			width: 1em;
+
+			&:last-child {
+				display: none;
+			}
 		}
 
 		&--reviews {
@@ -82,6 +91,18 @@
 
 		&.active {
 			color: #30a757;
+
+			.nav-slider__icon {
+				svg {
+					&:first-child {
+						display: none;
+					}
+
+					&:last-child {
+						display: inline-block;
+					}
+				}
+			}
 		}
 	}
 	.swiper-button-disabled,
@@ -92,14 +113,6 @@
 
 @media (max-width: 1379.98px) {
 	.nav-slider {
-		&__prev {
-			left: 20px;
-		}
-
-		&__next {
-			right: 20px;
-		}
-
 		.swiper-slide {
 			&:first-child {
 				margin-left: 20px;
