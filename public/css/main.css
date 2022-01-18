@@ -188,6 +188,7 @@
     font-size: 18px; }
     .products__btn-buy > * {
       transition: all 0.2s;
+      display: inline-block;
       padding: 0.72222em 2.44444em;
       background: #30a757;
       border: 0;
@@ -195,7 +196,7 @@
       font-size: 1em;
       font-weight: 700;
       text-align: center;
-      color: rgba(255, 255, 255, 0.9); }
+      color: rgba(255, 255, 255, 0.9) !important; }
       .products__btn-buy > *:hover {
         background: #36bb61; }
 
@@ -1454,6 +1455,75 @@
             column-count: 1; }
     .audio-list__item {
       font-size: 14px; } }
+
+.popup-shops {
+  max-width: 546px;
+  border-radius: 20px;
+  overflow: hidden;
+  font-family: "Nunito";
+  font-size: calc(min(5vw, 20px));
+  display: none;
+  background: #fff; }
+  .lity .popup-shops {
+    display: block; }
+  .popup-shops__header {
+    padding: 50px 20px;
+    background: url(../images/curved-bgs/light-orange.svg) no-repeat 50% 100%;
+    text-align: center;
+    color: #0033a0; }
+  .popup-shops__title {
+    text-transform: uppercase;
+    text-shadow: 0.05em 0.05em 0 #fff;
+    font-size: 1.1em;
+    font-weight: 900;
+    line-height: 1.36364; }
+  .popup-shops__tip {
+    margin: 0.625em 0;
+    font-size: 0.8em;
+    line-height: 1.375; }
+  .popup-shops__body {
+    padding: 50px 20px; }
+  .popup-shops__list {
+    max-width: 400px;
+    margin: 0 auto; }
+  .popup-shops__item {
+    margin-top: 30px;
+    margin-right: -10px;
+    margin-left: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
+    .popup-shops__item:first-child {
+      margin-top: 0; }
+  .popup-shops__logo {
+    flex: 0 0 auto;
+    padding: 0 10px;
+    width: 50%; }
+    .popup-shops__logo img {
+      max-width: 100%; }
+  .popup-shops__buy {
+    flex: 0 0 auto;
+    padding: 0 10px;
+    width: 50%; }
+  .popup-shops__button {
+    transition: all 0.2s;
+    display: inline-block;
+    padding: 0.72222em 1.66667em;
+    background: #30a757;
+    border-radius: 0.72222em;
+    font-size: 0.9em;
+    font-weight: 700;
+    line-height: 1.38889;
+    white-space: nowrap;
+    color: #fff !important; }
+    .popup-shops__button:hover {
+      background: #2a924d; }
+  .popup-shops__empty {
+    font-size: 0.9em;
+    font-weight: 700;
+    line-height: 1.38889;
+    color: #0000008f; }
 
 .page--orangecow {
   min-width: 320px;

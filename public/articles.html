@@ -161,6 +161,9 @@
 	<link href="//opt-1530635.ssl.1c-bitrix-cdn.ru/bitrix/templates/aspro-priority/css/custom.css?163596849412708"  data-template-style="true"  rel="stylesheet" />
 	<link href="//opt-1530635.ssl.1c-bitrix-cdn.ru/bitrix/tools/concept.quiz/css/responsive.css?162687638113048"  data-template-style="true"  rel="stylesheet" />
 
+	<link rel="preconnect" href="https://fonts.googleapis.com"> 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@7.4.1/swiper-bundle.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lity@2.4.1/dist/lity.min.css">
@@ -1541,7 +1544,48 @@
 
 	<div id="notify" class="notify"></div>
 
-	<style type="text/css">
+	<aside class="popup-shops" id="popup-shops">
+	    <div class="popup-shops__header">
+	        <div class="popup-shops__title">Выберите интернет-магазин</div>
+	        <div class="popup-shops__tip">*Для покупок мы предлагаем несколько сайтов партнеров</div>
+	    </div>
+	    <div class="popup-shops__body">
+	        <div class="popup-shops__list">
+	            <div class="popup-shops__item">
+	                <div class="popup-shops__logo">
+	                    <img src="images/temp/logos/1.png" alt="">
+	                </div>
+	                <div class="popup-shops__buy">
+	                    <a href="#" class="popup-shops__button">В магазин</a>
+	                </div>
+	            </div>
+	            <div class="popup-shops__item">
+	                <div class="popup-shops__logo">
+	                    <img src="images/temp/logos/2.png" alt="">
+	                </div>
+	                <div class="popup-shops__buy">
+	                    <a href="#" class="popup-shops__button">В магазин</a>
+	                </div>
+	            </div>
+	            <div class="popup-shops__item">
+	                <div class="popup-shops__logo">
+	                    <img src="images/temp/logos/3.png" alt="">
+	                </div>
+	                <div class="popup-shops__buy">
+	                    <a href="#" class="popup-shops__button">В магазин</a>
+	                </div>
+	            </div>
+	            <div class="popup-shops__item">
+	                <div class="popup-shops__logo">
+	                    <img src="images/temp/logos/4.png" alt="">
+	                </div>
+	                <div class="popup-shops__buy">
+	                    <div class="popup-shops__empty">Нет в наличии</div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</aside>	<style type="text/css">
 		.filelist {
 			position: absolute;
 			z-index: 999999;

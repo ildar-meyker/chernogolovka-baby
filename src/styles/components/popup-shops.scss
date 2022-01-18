@@ -1,0 +1,98 @@
+.popup-shops {
+	max-width: 546px;
+	border-radius: 20px;
+	overflow: hidden;
+	font-family: "Nunito";
+	font-size: calc(min(5vw, 20px));
+	display: none;
+	background: #fff;
+
+	.lity & {
+		display: block;
+	}
+
+	&__header {
+		padding: 50px 20px;
+		background: url(../images/curved-bgs/light-orange.svg) no-repeat 50%
+			100%;
+		text-align: center;
+		color: #0033a0;
+	}
+
+	&__title {
+		text-transform: uppercase;
+		text-shadow: 0.05em 0.05em 0 #fff;
+		font-size: 22/20 + em;
+		font-weight: 900;
+		line-height: (30/22);
+	}
+
+	&__tip {
+		margin: 10/16 + em 0;
+		font-size: 16/20 + em;
+		line-height: (22/16);
+	}
+
+	&__body {
+		padding: 50px 20px;
+	}
+
+	&__list {
+		max-width: 400px;
+		margin: 0 auto;
+	}
+
+	&__item {
+		margin-top: 30px;
+		margin-right: -10px;
+		margin-left: -10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	&__logo {
+		flex: 0 0 auto;
+		padding: 0 10px;
+		width: 50%;
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	&__buy {
+		flex: 0 0 auto;
+		padding: 0 10px;
+		width: 50%;
+	}
+
+	&__button {
+		transition: all 0.2s;
+		display: inline-block;
+		padding: 13/18 + em 30/18 + em;
+		background: #30a757;
+		border-radius: 13/18 + em;
+		font-size: 18/20 + em;
+		font-weight: 700;
+		line-height: (25/18);
+		white-space: nowrap;
+		color: #fff !important;
+
+		&:hover {
+			background: #2a924d;
+		}
+	}
+
+	&__empty {
+		font-size: 18/20 + em;
+		font-weight: 700;
+		line-height: (25/18);
+		color: #0000008f;
+	}
+}
