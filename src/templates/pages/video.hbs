@@ -3,63 +3,130 @@ title: Главная
 layout: default.hbs
 ---
 
+<div class="section__center">
+    <ul class="breadcrumb" id="navigation" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/" title="Главная" itemprop="item"><span itemprop="name">Главная</span></a><meta itemprop="position" content="1"></li>
+        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/company/" title="О компании" itemprop="item"><span itemprop="name">Развлечения</span></a><meta itemprop="position" content="2"></li>
+        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/company/" title="О компании" itemprop="item"><span itemprop="name">Мультфильмы</span></a><meta itemprop="position" content="2"></li>
+    </ul>
+</div>
 
+<nav class="nav-slider">
+    <div class="section__center">
+        <button type="button" class="nav-slider__prev">
+            <i class="icon-arrow-left"></i>
+        </button>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <a href="#" class="swiper-slide">
+                    <div class="nav-slider__icon">
+                        <svg class="icon">
+                            <use xlink:href="images/nav-slider/sprite-2.svg#video-clip"></use>
+                        </svg>
+                        <svg class="icon">
+                            <use xlink:href="images/nav-slider/sprite-2--green.svg#video-clip"></use>
+                        </svg>
+                    </div>
+                    <div class="nav-slider__text">Мультфильмы</div>
+                </a>
+                <a href="#" class="swiper-slide">
+                    <div class="nav-slider__icon">
+                        <svg class="icon">
+                            <use xlink:href="images/nav-slider/sprite-2.svg#video-camera"></use>
+                        </svg>
+                        <svg class="icon">
+                            <use xlink:href="images/nav-slider/sprite-2--green.svg#video-camera"></use>
+                        </svg>
+                    </div>
+                    <div class="nav-slider__text">Другие видео</div>
+                </a>
+            </div>
+        </div>
+        <button type="button" class="nav-slider__next">
+            <i class="icon-arrow-right"></i>
+        </button>
+    </div>
+</nav>
 
-<div class="slider-videos">
+<section class="video video--top">
+    <div class="section__curved section__curved--light-blue">
+        <div class="section__curved__content">
+            <div class="section__center">
+                <div class="video__player">
+                    <div class="video__label">
+                        <div class="video__label__text">новую серию смотри тут</div>
+                    </div>
+                    <div class="video__screen">
+                        <div class="video__image" style="background-image: url(images/temp/video.jpeg);"></div>
+                        <div class="video__play">
+                            <i class="icon-play"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    
+<div class="nav-pics__glue"></div>
+
+<section class="slider-videos">
 
     <div class="section__center">
         <h3 class="section__title">Другие серии</h3>
     </div>
 
-    <div class="section__curved section__curved--blue">
+    <div class="slider-videos__wrapper">
 
         <img src="images/decors/stars-1.png" alt="" class="slider-videos__decor-1">
         <img src="images/decors/stars-1.png" alt="" class="slider-videos__decor-2">
         <img src="images/decors/gypno-2.png" alt="" class="slider-videos__decor-3">
         <img src="images/decors/gypno-2.png" alt="" class="slider-videos__decor-4">
 
-        <div class="slider-videos__sticker slider-videos__sticker--back">
+         <div class="slider-videos__sticker slider-videos__sticker--back">
             <img src="images/decors/hero-1/1.png" alt="" class="slider-videos__sticker__1">
         </div>
         <div class="slider-videos__sticker slider-videos__sticker--cover">
             <img src="images/decors/hero-1/2.png" alt="" class="slider-videos__sticker__2">
         </div>
-        
-        <div class="section__curved__content">
-            <div class="slider-videos__slider">
-                <div class="section__center">
-                    <div class="slider-videos__body">
-                        <div class="slider-videos__list">
-                            {{#repeat 8}}
-                            <div class="slider-videos__item">
-                                <div class="slider-videos__border">
-                                    <div class="slider-videos__image" style="background-image: url(images/temp/video.jpeg);"></div>
-                                    <button type="button" class="slider-videos__play">
-                                        <i class="icon-play"></i>
-                                    </button>
+
+        <div class="slider-videos__content">
+            <div class="section__curved section__curved--blue">
+                <div class="section__curved__content">
+                    <div class="slider-videos__slider">
+                        <div class="section__center">
+                            <div class="slider-videos__body">
+                                <div class="slider-videos__list">
+                                    {{#repeat 8}}
+                                    <div class="slider-videos__item">
+                                        <div class="slider-videos__border">
+                                            <div class="slider-videos__image" style="background-image: url(images/temp/video.jpeg);"></div>
+                                            <button type="button" class="slider-videos__play">
+                                                <i class="icon-play"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    {{/repeat}}
                                 </div>
                             </div>
-                            {{/repeat}}
+                        </div>
+                        <div class="slider-videos__buttons">
+                            <div class="section__center">
+                                <button type="button" class="slider-videos__prev">
+                                    <i class="icon-arrow-left"></i>
+                                </button>
+                                <button type="button" class="slider-videos__next">
+                                    <i class="icon-arrow-right"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="slider-videos__buttons">
-                    <div class="section__center">
-                        <button type="button" class="slider-videos__prev">
-                            <i class="icon-arrow-left"></i>
-                        </button>
-                        <button type="button" class="slider-videos__next">
-                            <i class="icon-arrow-right"></i>
-                        </button>
-                    </div>
+                    <div class="slider-videos__dots"></div>
                 </div>
             </div>
-            <div class="slider-videos__dots"></div>
         </div>
     </div>
-</div>
+</section>
 
 
 {{> slider-quotes }}

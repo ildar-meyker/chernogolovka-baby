@@ -3,6 +3,14 @@
 	padding-top: 115px;
 	padding-bottom: 125px;
 
+	&--top {
+		padding: 0 !important;
+
+		.video__player {
+			margin-top: 0 !important;
+		}
+	}
+
 	&__title {
 		margin-bottom: 34/54 + em !important;
 	}
@@ -34,8 +42,10 @@
 		z-index: 10;
 
 		&__text {
-			display: inline-block;
-			padding: 28/32 + em 65/32 + em;
+			display: inline-flex;
+			align-items: center;
+			padding: 0 65/32 + em;
+			height: 100/32 + em;
 			background: url(../images/new-episode-bg.svg) no-repeat 50% 50%;
 			background-size: 100% 100%;
 			font-size: 1em;
@@ -173,11 +183,11 @@
 		}
 
 		&__label {
-			margin-bottom: 10px;
+			margin-bottom: 10px !important;
 			position: static;
 			text-align: center;
 			transform: none;
-			font-size: 14px;
+			font-size: 14px !important;
 		}
 
 		&__screen {
@@ -192,6 +202,37 @@
 
 		&__decor-2 {
 			width: 15%;
+		}
+	}
+}
+
+@media (min-width: 600px) {
+	.video {
+		&--top {
+			.video__label {
+				position: static;
+				transform: none;
+				margin-bottom: 70/54 + em;
+				text-align: center;
+				font-size: calc(min(3vw, 54px));
+			}
+
+			.video__label__text {
+				padding: 0 65/54 + em;
+				height: 100/54 + em;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.video {
+		&--top {
+			.section__curved {
+				&:after {
+					display: none;
+				}
+			}
 		}
 	}
 }

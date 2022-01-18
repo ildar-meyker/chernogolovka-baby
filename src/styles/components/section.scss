@@ -79,6 +79,17 @@
 			}
 		}
 
+		&--light-blue {
+			&:before,
+			&:after {
+				background-image: url(../images/curved-bgs/light-blue--2.svg);
+			}
+
+			.section__curved__content {
+				background: #f5f7fe;
+			}
+		}
+
 		&--green {
 			&:before,
 			&:after {
