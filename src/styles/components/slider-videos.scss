@@ -105,7 +105,7 @@
 		align-items: center;
 		width: 3em;
 		height: 3em;
-		background: #ea4d33;
+		background: rgba(#000, 0.4);
 		color: #fff;
 		position: absolute;
 		top: 50%;
@@ -121,6 +121,10 @@
 
 		i {
 			transform: translateX(0.1em);
+		}
+
+		&--red {
+			background: #ea4d33;
 		}
 	}
 

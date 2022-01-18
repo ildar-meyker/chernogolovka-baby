@@ -856,7 +856,7 @@
     align-items: center;
     width: 3em;
     height: 3em;
-    background: #ea4d33;
+    background: rgba(0, 0, 0, 0.4);
     color: #fff;
     position: absolute;
     top: 50%;
@@ -872,6 +872,8 @@
     .slider-videos__play i {
       -webkit-transform: translateX(0.1em);
               transform: translateX(0.1em); }
+    .slider-videos__play--red {
+      background: #ea4d33; }
   .slider-videos__decor-1 {
     -webkit-transform: rotate(110deg);
             transform: rotate(110deg);
@@ -1009,6 +1011,9 @@
     padding: 0 !important; }
     .video--top .video__player {
       margin-top: 0 !important; }
+    .video--top .video__screen {
+      width: auto;
+      max-width: none; }
   .video__title {
     margin-bottom: 0.62963em !important; }
   .video__desc {
@@ -1054,6 +1059,14 @@
     margin-left: auto;
     background: linear-gradient(64.94deg, rgba(0, 51, 160, 0.15) 2.94%, rgba(105, 80, 162, 0.15) 86.46%);
     border-radius: 1.875em; }
+  .video__logo {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20%;
+    -webkit-transform: translate(0, 50%);
+            transform: translate(0, 50%);
+    max-width: 288px; }
   .video__image {
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -1070,7 +1083,7 @@
     align-items: center;
     width: 3em;
     height: 3em;
-    background: #ea4d33;
+    background: rgba(0, 0, 0, 0.4);
     color: #fff;
     position: absolute;
     top: 50%;
@@ -1085,6 +1098,55 @@
     .video__play i {
       -webkit-transform: translateX(0.1em);
               transform: translateX(0.1em); }
+    .video__play--red {
+      background: #ea4d33; }
+  .video__play-pulse {
+    width: 3em;
+    height: 3em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    cursor: pointer; }
+    .video__play-pulse__circle {
+      transition: all 0.2s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      border-radius: 50%;
+      color: #ffc525; }
+    .video__play-pulse:hover .video__play-pulse__circle {
+      -webkit-transform: scale(1.1);
+              transform: scale(1.1); }
+    .video__play-pulse i {
+      display: block;
+      -webkit-transform: translateX(0.1em);
+              transform: translateX(0.1em);
+      font-size: 2em; }
+    .video__play-pulse:before, .video__play-pulse:after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      width: 120%;
+      height: 120%;
+      content: " ";
+      border: 1px solid #fff;
+      border-radius: 50%;
+      z-index: -1; }
+    .video__play-pulse:before {
+      -webkit-animation: button-waves 2s 0.2s infinite;
+              animation: button-waves 2s 0.2s infinite; }
+    .video__play-pulse:after {
+      -webkit-animation: button-waves 2s infinite;
+              animation: button-waves 2s infinite;
+      width: 140%;
+      height: 140%; }
   .video__decor-1 {
     position: absolute;
     left: 83%;
@@ -1109,7 +1171,7 @@
     padding: 85px 0; } }
 
 @media (max-width: 767.98px) {
-  .video__play {
+  .video__play, .video__play-pulse {
     font-size: 4vw; }
   .video__desc {
     font-size: 16px; }
@@ -1157,6 +1219,30 @@
 @media (min-width: 768px) {
   .video--top .section__curved:after {
     display: none; } }
+
+@-webkit-keyframes button-waves {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(0);
+            transform: translate(-50%, -50%) scale(0);
+    opacity: 1; }
+  50% {
+    opacity: 1; }
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1.3);
+            transform: translate(-50%, -50%) scale(1.3);
+    opacity: 0; } }
+
+@keyframes button-waves {
+  0% {
+    -webkit-transform: translate(-50%, -50%) scale(0);
+            transform: translate(-50%, -50%) scale(0);
+    opacity: 1; }
+  50% {
+    opacity: 1; }
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1.3);
+            transform: translate(-50%, -50%) scale(1.3);
+    opacity: 0; } }
 
 .less-more__crop {
   transition: 0.3s all; }

@@ -9,6 +9,11 @@
 		.video__player {
 			margin-top: 0 !important;
 		}
+
+		.video__screen {
+			width: auto;
+			max-width: none;
+		}
 	}
 
 	&__title {
@@ -73,6 +78,15 @@
 		border-radius: 60/32 + em;
 	}
 
+	&__logo {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 20%;
+		transform: translate(0, 50%);
+		max-width: 288px;
+	}
+
 	&__image {
 		background-position: 50% 50%;
 		background-repeat: no-repeat;
@@ -93,7 +107,7 @@
 		align-items: center;
 		width: 3em;
 		height: 3em;
-		background: #ea4d33;
+		background: rgba(#000, 0.4);
 		color: #fff;
 		position: absolute;
 		top: 50%;
@@ -108,6 +122,68 @@
 
 		i {
 			transform: translateX(0.1em);
+		}
+
+		&--red {
+			background: #ea4d33;
+		}
+	}
+
+	&__play-pulse {
+		width: 3em;
+		height: 3em;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		cursor: pointer;
+
+		&__circle {
+			transition: all 0.2s;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			background: #fff;
+			border-radius: 50%;
+			color: #ffc525;
+		}
+
+		&:hover {
+			.video__play-pulse__circle {
+				transform: scale(1.1);
+			}
+		}
+
+		i {
+			display: block;
+			transform: translateX(0.1em);
+			font-size: 2em;
+		}
+
+		&:before,
+		&:after {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 120%;
+			height: 120%;
+			content: " ";
+			border: 1px solid #fff;
+			border-radius: 50%;
+			z-index: -1;
+		}
+
+		&:before {
+			animation: button-waves 2s 0.2s infinite;
+		}
+
+		&:after {
+			animation: button-waves 2s infinite;
+			width: 140%;
+			height: 140%;
 		}
 	}
 
@@ -148,7 +224,8 @@
 
 @media (max-width: 767.98px) {
 	.video {
-		&__play {
+		&__play,
+		&__play-pulse {
 			font-size: 4vw;
 		}
 
@@ -234,5 +311,21 @@
 				}
 			}
 		}
+	}
+}
+
+@keyframes button-waves {
+	0% {
+		transform: translate(-50%, -50%) scale(0);
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		transform: translate(-50%, -50%) scale(1.3);
+		opacity: 0;
 	}
 }
