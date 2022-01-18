@@ -866,7 +866,7 @@
     width: 3em;
     height: 3em;
     background: rgba(0, 0, 0, 0.4);
-    color: #fff;
+    color: #fff !important;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1093,7 +1093,7 @@
     width: 3em;
     height: 3em;
     background: rgba(0, 0, 0, 0.4);
-    color: #fff;
+    color: #fff !important;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1127,7 +1127,7 @@
       height: 100%;
       background: #fff;
       border-radius: 50%;
-      color: #ffc525; }
+      color: #ffc525 !important; }
     .video__play-pulse:hover .video__play-pulse__circle {
       -webkit-transform: scale(1.1);
               transform: scale(1.1); }
@@ -1231,8 +1231,8 @@
 
 @-webkit-keyframes button-waves {
   0% {
-    -webkit-transform: translate(-50%, -50%) scale(0);
-            transform: translate(-50%, -50%) scale(0);
+    -webkit-transform: translate(-50%, -50%) scale(0.1);
+            transform: translate(-50%, -50%) scale(0.1);
     opacity: 1; }
   50% {
     opacity: 1; }
@@ -1243,8 +1243,8 @@
 
 @keyframes button-waves {
   0% {
-    -webkit-transform: translate(-50%, -50%) scale(0);
-            transform: translate(-50%, -50%) scale(0);
+    -webkit-transform: translate(-50%, -50%) scale(0.1);
+            transform: translate(-50%, -50%) scale(0.1);
     opacity: 1; }
   50% {
     opacity: 1; }
@@ -1420,7 +1420,9 @@
       -webkit-transform: translate(-50%, -50%) scale(1.1);
               transform: translate(-50%, -50%) scale(1.1); }
   .audio-list__icon-play, .audio-list__icon-pause {
-    transition: all 0.2s;
+    transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
     position: absolute;
     top: 50%;
     left: 50%;
