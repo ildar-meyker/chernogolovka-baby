@@ -102,6 +102,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_LessMore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/LessMore */ "./src/js/modules/LessMore.js");
 /* harmony import */ var _modules_NavSlider__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/NavSlider */ "./src/js/modules/NavSlider.js");
 /* harmony import */ var _modules_SliderVideos__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/SliderVideos */ "./src/js/modules/SliderVideos.js");
+/* harmony import */ var _modules_AudioList__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/AudioList */ "./src/js/modules/AudioList.js");
+
 
 
 
@@ -112,6 +114,79 @@ __webpack_require__.r(__webpack_exports__);
 $(function () {
   console.log("Hello, world!");
 });
+
+/***/ }),
+
+/***/ "./src/js/modules/AudioList.js":
+/*!*************************************!*\
+  !*** ./src/js/modules/AudioList.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+// <script src="https://cdn.jsdelivr.net/npm/howler@2.2.3/dist/howler.min.js"></script>
+// import $ from "jquery";
+// import { Howl, Howler } from "howler";
+var AudioList = {
+  _$currentItem: $(),
+  _player: null,
+  _isPlayerOn: false,
+  _play: function _play() {
+    this._$currentItem.addClass("active");
+
+    this._isPlayerOn = true;
+
+    this._player.play();
+  },
+  _pause: function _pause() {
+    this._$currentItem.removeClass("active");
+
+    this._isPlayerOn = false;
+
+    this._player.pause();
+  },
+  _handlePlayButton: function _handlePlayButton(e) {
+    var _this = this;
+
+    var $item = $(e.currentTarget).closest(".audio-list__item");
+    var src = $item.data("src");
+    var isPlayerOn = this._isPlayerOn;
+
+    if (isPlayerOn) {
+      this._pause();
+    }
+
+    if (this._$currentItem[0] !== $item[0]) {
+      this._$currentItem = $item;
+      this._player = new Howl({
+        src: [src]
+      });
+
+      this._player.on("end", function () {
+        _this._$currentItem.removeClass("active");
+
+        _this._isPlayerOn = false;
+      });
+
+      this._play();
+    } else {
+      if (isPlayerOn) return;
+
+      this._play();
+    }
+  },
+  init: function init() {
+    if ($(".audio-list").length === 0) return;
+    $(document).on("click", ".audio-list__button", this._handlePlayButton.bind(this));
+  }
+};
+$(function () {
+  AudioList.init();
+});
+/* harmony default export */ __webpack_exports__["default"] = (AudioList);
 
 /***/ }),
 

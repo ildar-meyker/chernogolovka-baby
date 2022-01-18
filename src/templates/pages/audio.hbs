@@ -1,0 +1,94 @@
+---
+title: Главная
+layout: default.hbs
+---
+
+<div class="section__center">
+    <ul class="breadcrumb" id="navigation" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/" title="Главная" itemprop="item"><span itemprop="name">Главная</span></a><meta itemprop="position" content="1"></li>
+        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/company/" title="О компании" itemprop="item"><span itemprop="name">Развлечения</span></a><meta itemprop="position" content="2"></li>
+        <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="/company/" title="О компании" itemprop="item"><span itemprop="name">Мультфильмы</span></a><meta itemprop="position" content="2"></li>
+    </ul>
+</div>
+
+<nav class="nav-slider">
+    <div class="section__center">
+        <button type="button" class="nav-slider__prev">
+            <i class="icon-arrow-left"></i>
+        </button>
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <a href="#" class="swiper-slide">
+                    <div class="nav-slider__icon">
+                        <svg class="icon">
+                            <use xlink:href="images/nav-slider/sprite-2.svg#video-clip"></use>
+                        </svg>
+                        <svg class="icon">
+                            <use xlink:href="images/nav-slider/sprite-2--green.svg#video-clip"></use>
+                        </svg>
+                    </div>
+                    <div class="nav-slider__text">Мультфильмы</div>
+                </a>
+                <a href="#" class="swiper-slide">
+                    <div class="nav-slider__icon">
+                        <svg class="icon">
+                            <use xlink:href="images/nav-slider/sprite-2.svg#video-camera"></use>
+                        </svg>
+                        <svg class="icon">
+                            <use xlink:href="images/nav-slider/sprite-2--green.svg#video-camera"></use>
+                        </svg>
+                    </div>
+                    <div class="nav-slider__text">Другие видео</div>
+                </a>
+            </div>
+        </div>
+        <button type="button" class="nav-slider__next">
+            <i class="icon-arrow-right"></i>
+        </button>
+    </div>
+</nav>
+
+<div class="section__curved section__curved--light-blue">
+    <div class="section__curved__content">
+        <div class="section__center">
+            <div class="section__title">Аудио</div>
+            <div class="audio-list">
+                {{#repeat 4}}
+                <div class="audio-list__item" data-src="data/audio-samples/SoundHelix-Song-1.mp3">
+                    <div class="audio-list__index"></div>
+                    <button type="button" class="audio-list__button" style="background-image: url(images/temp/videos/3.jpeg);">
+                        <i class="icon-play audio-list__icon-play"></i>
+                        <i class="icon-pause audio-list__icon-pause"></i>
+                    </button>
+                    <div class="audio-list__text">
+                        <div class="audio-list__name">Оранжевая корова</div>
+                        <div class="audio-list__desc">Оранжевая корова</div>
+                    </div>
+                    <div class="audio-list__time">2:40</div>
+                </div>
+                <div class="audio-list__item" data-src="data/audio-samples/SoundHelix-Song-2.mp3">
+                    <div class="audio-list__index"></div>
+                    <button type="button" class="audio-list__button" style="background-image: url(images/temp/videos/2.jpeg);">
+                        <i class="icon-play audio-list__icon-play"></i>
+                        <i class="icon-pause audio-list__icon-pause"></i>
+                    </button>
+                    <div class="audio-list__text">
+                        <div class="audio-list__name">Оранжевая корова</div>
+                        <div class="audio-list__desc">Оранжевая корова</div>
+                    </div>
+                    <div class="audio-list__time">2:40</div>
+                </div>
+                {{/repeat}}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="nav-pics__glue"></div>
+
+
+{{> slider-quotes }}
+
+{{> slider-logos }}
+
+<script src="https://cdn.jsdelivr.net/npm/howler@2.2.3/dist/howler.min.js"></script>
