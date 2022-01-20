@@ -1,24 +1,12 @@
 .audio-list {
-	column-count: 2;
-	column-width: 50%;
-	column-gap: 30px;
-	counter-reset: item;
+	position: relative;
 
-	&__index {
-		flex: 0 0 auto;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 36/22 + em;
-		height: 36/22 + em;
-		font-weight: 700;
-		border-radius: 10/22 + em;
-		background: #ffc525;
-		color: #fff;
-
-		&:before {
-			content: counter(item);
-		}
+	&__list {
+		position: relative;
+		column-count: 2;
+		column-width: 50%;
+		column-gap: 10%;
+		counter-reset: item;
 	}
 
 	&__item {
@@ -39,6 +27,23 @@
 		}
 	}
 
+	&__num {
+		flex: 0 0 auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 36/22 + em;
+		height: 36/22 + em;
+		font-weight: 700;
+		border-radius: 10/22 + em;
+		background: #ffc525;
+		color: #fff;
+
+		&:before {
+			content: counter(item);
+		}
+	}
+
 	&__button {
 		position: relative;
 		flex: 0 0 auto;
@@ -52,7 +57,7 @@
 		background-size: cover;
 		border-radius: 20/54 + em;
 		border: 0;
-		margin-left: calc(min(5vw, 30px));
+		margin-left: 30/54 + em;
 		overflow: hidden;
 		color: #fff;
 
@@ -70,7 +75,7 @@
 
 		&:hover {
 			i {
-				transform: translate(-50%, -50%) scale(1.1);
+				transform: scale(1.1);
 			}
 		}
 	}
@@ -81,7 +86,8 @@
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		transform: translate(-50%, -50%);
+		margin-top: -0.5em;
+		margin-left: -0.5em;
 	}
 
 	&__icon-pause {
@@ -89,12 +95,12 @@
 	}
 
 	&__text {
-		margin-left: calc(min(5vw, 30px));
+		margin-left: 30/22 + em;
 		margin-right: auto;
 	}
 
 	&__time {
-		margin-left: calc(min(5vw, 30px));
+		margin-left: 30/22 + em;
 		color: rgba(#000, 0.8);
 	}
 
@@ -111,15 +117,83 @@
 		margin-top: 5/18 + em;
 		color: #000;
 	}
+
+	&__decor-1 {
+		transform: rotate(110deg);
+		position: absolute;
+		left: 10%;
+		top: 4%;
+		width: 6.5vw;
+		max-width: 97px;
+		mix-blend-mode: exclusion;
+		opacity: 0.1;
+	}
+
+	&__decor-2 {
+		transform: rotate(180deg);
+		position: absolute;
+		left: 80%;
+		top: 8%;
+		width: 3.5vw;
+		max-width: 50px;
+		opacity: 0.44;
+	}
+	&__decor-3 {
+		transform: rotate(-146.86deg);
+		position: absolute;
+		left: 85%;
+		top: 8%;
+		width: 11vw;
+		max-width: 160px;
+		opacity: 0.3;
+	}
+	&__decor-4 {
+		transform: rotate(180deg);
+		position: absolute;
+		left: 2%;
+		top: 68%;
+		width: 3.5vw;
+		max-width: 50px;
+		opacity: 0.44;
+	}
+	&__decor-5 {
+		transform: rotate(176deg);
+		position: absolute;
+		left: 12%;
+		top: 78%;
+		width: 3.5vw;
+		max-width: 35px;
+		opacity: 0.44;
+	}
+	&__decor-6 {
+		transform: rotate(176deg);
+		position: absolute;
+		left: 32%;
+		top: 73%;
+		width: 3.5vw;
+		max-width: 35px;
+		opacity: 0.44;
+	}
+	&__decor-7 {
+		position: absolute;
+		left: 75%;
+		top: 67%;
+		width: 11vw;
+		max-width: 160px;
+		opacity: 0.3;
+	}
 }
 
 @media (max-width: 991.98px) {
+	.audio-list {
+		&__list {
+			column-count: 1;
+		}
+	}
 }
 
 @media (max-width: 767.98px) {
 	.audio-list {
-		column-count: 1;
-
 		&__item {
 			font-size: 14px;
 		}

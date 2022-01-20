@@ -48,43 +48,56 @@ layout: default.hbs
     </div>
 </nav>
 
-<div class="section__curved section__curved--light-blue">
-    <div class="section__curved__content">
-        <div class="section__center">
-            <div class="section__title">Аудио</div>
-            <div class="audio-list">
-                {{#repeat 4}}
-                <div class="audio-list__item" data-src="data/audio-samples/SoundHelix-Song-1.mp3">
-                    <div class="audio-list__index"></div>
-                    <button type="button" class="audio-list__button" style="background-image: url(images/temp/videos/3.jpeg);">
-                        <i class="icon-play audio-list__icon-play"></i>
-                        <i class="icon-pause audio-list__icon-pause"></i>
-                    </button>
-                    <div class="audio-list__text">
-                        <div class="audio-list__name">Оранжевая корова</div>
-                        <div class="audio-list__desc">Оранжевая корова</div>
+<div class="audio-list">
+
+    <img src="images/decors/gypno-2.png" alt="" class="audio-list__decor-1">
+    <img src="images/decors/gypno-2.png" alt="" class="audio-list__decor-2">
+    <img src="images/decors/stars-1.png" alt="" class="audio-list__decor-3">
+    <img src="images/decors/gypno-2.png" alt="" class="audio-list__decor-4">
+    <img src="images/decors/gypno-2.png" alt="" class="audio-list__decor-5">
+    <img src="images/decors/gypno-2.png" alt="" class="audio-list__decor-6">
+    <img src="images/decors/stars-1.png" alt="" class="audio-list__decor-7">
+
+    <div class="section__curved section__curved--light-blue">
+        <div class="section__curved__content">
+            <div class="section__center">
+                <div class="section__title">Аудио</div>
+                <div class="audio-list__list">
+                    {{#repeat 4}}
+                    <div class="audio-list__item" data-src="data/audio-samples/SoundHelix-Song-1.mp3">
+                        <div class="audio-list__num"></div>
+                        <button type="button" class="audio-list__button" style="background-image: url(images/temp/videos/3.jpeg);">
+                            <i class="icon-play audio-list__icon-play"></i>
+                            <i class="icon-pause audio-list__icon-pause"></i>
+                        </button>
+                        <div class="audio-list__text">
+                            <div class="audio-list__name">Оранжевая корова</div>
+                            <div class="audio-list__desc">Оранжевая корова</div>
+                        </div>
+                        <div class="audio-list__time">2:40</div>
                     </div>
-                    <div class="audio-list__time">2:40</div>
-                </div>
-                <div class="audio-list__item" data-src="data/audio-samples/SoundHelix-Song-2.mp3">
-                    <div class="audio-list__index"></div>
-                    <button type="button" class="audio-list__button" style="background-image: url(images/temp/videos/2.jpeg);">
-                        <i class="icon-play audio-list__icon-play"></i>
-                        <i class="icon-pause audio-list__icon-pause"></i>
-                    </button>
-                    <div class="audio-list__text">
-                        <div class="audio-list__name">Оранжевая корова</div>
-                        <div class="audio-list__desc">Оранжевая корова</div>
+                    <div class="audio-list__item" data-src="data/audio-samples/SoundHelix-Song-2.mp3">
+                        <div class="audio-list__num"></div>
+                        <button type="button" class="audio-list__button" style="background-image: url(images/temp/videos/2.jpeg);">
+                            <i class="icon-play audio-list__icon-play"></i>
+                            <i class="icon-pause audio-list__icon-pause"></i>
+                        </button>
+                        <div class="audio-list__text">
+                            <div class="audio-list__name">Оранжевая корова</div>
+                            <div class="audio-list__desc">Оранжевая корова</div>
+                        </div>
+                        <div class="audio-list__time">2:40</div>
                     </div>
-                    <div class="audio-list__time">2:40</div>
+                    {{/repeat}}
                 </div>
-                {{/repeat}}
             </div>
         </div>
     </div>
-</div>
 
-<div class="nav-pics__glue"></div>
+    <div class="nav-pics__glue"></div>
+
+    
+</div>
 
 
 {{> slider-quotes }}
