@@ -282,14 +282,10 @@
 @media (max-width: 599.98px) {
   .nav-articles__item {
     font-size: 12px; }
-  .nav-articles__title {
-    min-height: 3em; }
   .nav-articles__desc {
-    padding-right: 0; }
+    padding-right: 1.5em; }
   .nav-articles__arrow {
-    top: 1.18182em;
-    -webkit-transform: none;
-            transform: none; } }
+    right: 0.5em; } }
 
 .nav-pics:before, .nav-pics:after {
   content: " ";

@@ -92,17 +92,12 @@
 			font-size: 12px;
 		}
 
-		&__title {
-			min-height: 33/22 * 2 + em;
-		}
-
 		&__desc {
-			padding-right: 0;
+			padding-right: 1.5em;
 		}
 
 		&__arrow {
-			top: 26/22 + em;
-			transform: none;
+			right: 0.5em;
 		}
 	}
 }
