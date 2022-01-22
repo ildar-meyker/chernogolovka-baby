@@ -1312,8 +1312,10 @@
   .nav-slider__text {
     line-height: 1.21429;
     margin-top: 10px; }
+  .nav-slider .swiper {
+    text-align: center; }
   .nav-slider .swiper-wrapper {
-    display: flex; }
+    display: inline-flex; }
   .nav-slider .swiper-slide {
     flex: 0 0 auto;
     max-width: 8em;

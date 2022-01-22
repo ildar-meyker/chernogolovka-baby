@@ -71,8 +71,12 @@
 		margin-top: 10px;
 	}
 
+	.swiper {
+		text-align: center;
+	}
+
 	.swiper-wrapper {
-		display: flex;
+		display: inline-flex;
 	}
 
 	.swiper-slide {
