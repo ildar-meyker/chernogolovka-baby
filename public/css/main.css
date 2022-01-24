@@ -1312,11 +1312,15 @@
   .nav-slider__text {
     line-height: 1.21429;
     margin-top: 10px; }
-  .nav-slider .swiper {
-    text-align: center; }
   .nav-slider .swiper-wrapper {
-    display: inline-flex; }
+    display: block;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 0; }
   .nav-slider .swiper-slide {
+    display: inline-block;
+    vertical-align: top;
+    white-space: normal;
     flex: 0 0 auto;
     max-width: 8em;
     margin-right: 35px;
