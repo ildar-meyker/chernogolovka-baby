@@ -1,5 +1,5 @@
 .slider-cards {
-	margin: 120px 0;
+	margin: 60px 0;
 
 	.slick-dots {
 		display: flex;
@@ -28,13 +28,13 @@
 
 @media (max-width: 991.98px) {
 	.slider-cards {
-		margin: 85px 0;
+		margin: 45px 0;
 	}
 }
 
 @media (max-width: 599.98px) {
 	.slider-cards {
-		margin: 10vw 0;
+		margin: 9vw 0;
 
 		.slick-dots {
 			li {

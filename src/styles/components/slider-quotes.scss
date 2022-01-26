@@ -138,28 +138,6 @@
 		}
 	}
 
-	&__btn-add {
-		margin-top: 30/18 + em;
-		font-size: 18px;
-
-		> * {
-			transition: all 0.2s;
-			display: inline-block;
-			border: 0;
-			border-radius: 13/18 + em;
-			padding: 13/18 + em 30/18 + em;
-			background: #ffc525;
-			font-size: 1em;
-			font-weight: 700;
-			line-height: (24.55/18);
-			color: #fff;
-
-			&:hover {
-				background: darken(#ffc525, 5%);
-			}
-		}
-	}
-
 	&__decor-1 {
 		transform: rotate(110deg);
 		position: absolute;
@@ -184,7 +162,7 @@
 		transform: rotate(-5deg);
 		position: absolute;
 		left: 16%;
-		top: 15%;
+		top: 22%;
 		width: 6vw;
 		max-width: 97px;
 		mix-blend-mode: multiply;
@@ -266,8 +244,7 @@
 			font-size: 13px;
 		}
 
-		&__name,
-		&__btn-add {
+		&__name {
 			font-size: 16px;
 		}
 
@@ -339,11 +316,6 @@
 			width: 8vw;
 			max-width: 30px;
 			margin: 0 0 3vw 0;
-		}
-
-		&__btn-add {
-			margin-top: 1em;
-			font-size: 12px;
 		}
 
 		.slick-dots {
