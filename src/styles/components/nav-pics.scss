@@ -2,14 +2,10 @@
 	&:before,
 	&:after {
 		content: " ";
-		height: 110px;
+		height: 90px;
 		background: url(../images/curved-bgs/light-blue.svg) no-repeat 50% 0;
 		background-size: 100% auto;
 		display: block;
-	}
-
-	&:before {
-		height: 90px;
 	}
 
 	&:after {
@@ -42,6 +38,13 @@
 		flex: 0 0 auto;
 		padding: 0 35px;
 		width: 33.33%;
+	}
+
+	&__filled {
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: contain;
+		padding: 10px;
 	}
 
 	&__image {
@@ -125,6 +128,11 @@
 
 @media (max-width: 991.98px) {
 	.nav-pics {
+		&:before,
+		&:after {
+			height: 45px;
+		}
+
 		&__row {
 			margin: 0 -20px;
 		}
@@ -137,13 +145,6 @@
 
 @media (max-width: 767.98px) {
 	.nav-pics {
-		&:before {
-			height: 35px;
-		}
-		&:after {
-			height: 55px;
-		}
-
 		&__row {
 			flex-wrap: wrap;
 		}
@@ -154,6 +155,10 @@
 			&:first-child {
 				margin-top: 0;
 			}
+		}
+
+		&__filled {
+			padding: 0;
 		}
 
 		&__image {

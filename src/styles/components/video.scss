@@ -1,7 +1,6 @@
 .video {
 	position: relative;
-	padding-top: 115px;
-	padding-bottom: 125px;
+	padding: 90px 0;
 
 	&--top {
 		padding: 0 !important;
@@ -218,7 +217,7 @@
 
 @media (max-width: 991.98px) {
 	.video {
-		padding: 85px 0;
+		padding: 45px 0;
 	}
 }
 
@@ -244,7 +243,7 @@
 
 @media (max-width: 599.98px) {
 	.video {
-		padding: 50px 0;
+		padding: 9vw 0;
 
 		&__desc {
 			font-size: 14px;
@@ -256,7 +255,7 @@
 		}
 
 		&__player {
-			margin-top: 65px;
+			margin-top: 9vw;
 		}
 
 		&__label {
