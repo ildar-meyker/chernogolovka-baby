@@ -9,6 +9,7 @@
 	}
 
 	&:after {
+		height: 120px;
 		background-position: 50% 100%;
 	}
 
@@ -16,6 +17,10 @@
 		&:before,
 		&:after {
 			background-image: url(../images/curved-bgs/light-blue--2.svg);
+		}
+
+		&:after {
+			height: 90px;
 		}
 	}
 
@@ -131,6 +136,16 @@
 		&:before,
 		&:after {
 			height: 45px;
+		}
+
+		&:after {
+			height: 65px;
+		}
+
+		&--2 {
+			&:after {
+				height: 45px;
+			}
 		}
 
 		&__row {
