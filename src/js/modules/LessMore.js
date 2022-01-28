@@ -37,10 +37,24 @@ const LessMore = {
 		this.checkHeight();
 	},
 
+	_handleButtonClick(e) {
+		const type = $(e.target).data("type");
+
+		if (type === "popup") {
+			return;
+		}
+
+		this.toggle.bind(this);
+	},
+
 	init() {
 		this.checkHeight();
 
-		$(document).on("click", ".less-more__button", this.toggle.bind(this));
+		$(document).on(
+			"click",
+			".less-more__button",
+			this._handleButtonClick.bind(this)
+		);
 
 		$(window).on(
 			"resize",

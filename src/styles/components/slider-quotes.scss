@@ -1,6 +1,19 @@
 .slider-quotes {
 	position: relative;
 
+	&__popup {
+		display: none;
+		max-width: 600px;
+		margin: 0 auto;
+		padding: calc(min(10vw, 50px));
+		border-radius: 20px;
+		background: #fff;
+
+		.lity & {
+			display: block;
+		}
+	}
+
 	&__slider {
 		position: relative;
 	}
@@ -106,6 +119,11 @@
 		font-size: 14px;
 		line-height: (21/14);
 		color: rgba(#000, 0.8);
+
+		&__crop {
+			max-height: 1.5 * 3em;
+			overflow: hidden;
+		}
 
 		a {
 			text-decoration: underline;
@@ -308,7 +326,6 @@
 
 			&__crop {
 				max-height: 1.5 * 2em;
-				overflow: hidden;
 			}
 		}
 

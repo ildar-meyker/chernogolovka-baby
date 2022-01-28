@@ -525,6 +525,15 @@
 
 .slider-quotes {
   position: relative; }
+  .slider-quotes__popup {
+    display: none;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: calc(min(10vw, 50px));
+    border-radius: 20px;
+    background: #fff; }
+    .lity .slider-quotes__popup {
+      display: block; }
   .slider-quotes__slider {
     position: relative; }
   .slider-quotes__buttons {
@@ -598,6 +607,9 @@
     font-size: 14px;
     line-height: 1.5;
     color: rgba(0, 0, 0, 0.8); }
+    .slider-quotes__desc__crop {
+      max-height: 4.5em;
+      overflow: hidden; }
     .slider-quotes__desc a {
       text-decoration: underline;
       color: #30a757; }
@@ -732,8 +744,7 @@
   .slider-quotes__desc {
     font-size: 12px; }
     .slider-quotes__desc__crop {
-      max-height: 3em;
-      overflow: hidden; }
+      max-height: 3em; }
   .slider-quotes__mark {
     width: 8vw;
     max-width: 30px;

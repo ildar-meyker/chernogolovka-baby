@@ -228,9 +228,18 @@ var LessMore = {
   _handleWindowResize: function _handleWindowResize() {
     this.checkHeight();
   },
+  _handleButtonClick: function _handleButtonClick(e) {
+    var type = $(e.target).data("type");
+
+    if (type === "popup") {
+      return;
+    }
+
+    this.toggle.bind(this);
+  },
   init: function init() {
     this.checkHeight();
-    $(document).on("click", ".less-more__button", this.toggle.bind(this));
+    $(document).on("click", ".less-more__button", this._handleButtonClick.bind(this));
     $(window).on("resize", $.throttle(250, this._handleWindowResize.bind(this)));
   }
 };
